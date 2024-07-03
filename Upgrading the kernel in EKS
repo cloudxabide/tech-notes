@@ -17,7 +17,7 @@ sudo amazon-linux-extras disable kernel-5.10
 sudo amazon-linux-extras install kernel-5.15 -y
 
 ## Verify the installed kernels from the RPM database:
-[root@ip-172-31-22-8 /]# rpm -qa |grep kernel
+rpm -qa |grep kernel
 kernel-5.10.219-208.866.amzn2.x86_64
 kernel-5.15.160-104.158.amzn2.x86_64
 kernel-headers-5.10.219-208.866.amzn2.x86_64
