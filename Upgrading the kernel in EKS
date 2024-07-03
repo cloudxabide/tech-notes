@@ -5,6 +5,7 @@ sudo yum versionlock list
 
 ## Lock and delete the version you want to upgrade from:
 sudo yum versionlock delete kernel-5.10.219-208.866.amzn2.*
+
 Loaded plugins: priorities, update-motd, versionlock
 Deleting versionlock for: 0:kernel-5.10.219-208.866.amzn2.*
 versionlock deleted: 1
