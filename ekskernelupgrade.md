@@ -1,5 +1,5 @@
 
-#### Upgrade the Kernel version of a node in EKS
+# Upgrade the Kernel version of a node in EKS
 
 ## List the versions that are on the EKS node
 ```
