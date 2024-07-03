@@ -1,6 +1,6 @@
 ### How can you bump up the kernel on a node in EKS?
 
-* List the versions that are on the EKS node
+** List the versions that are on the EKS node
 -sudo yum versionlock list
 
 * Lock and delete the version you want to upgrade from
