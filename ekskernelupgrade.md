@@ -1,5 +1,6 @@
 
 # Upgrade the Kernel version of a node in EKS
+Few notes on how to upgrade the kernel of nodes in EKS.
 
 ## List the versions that are on the EKS node
 ```
