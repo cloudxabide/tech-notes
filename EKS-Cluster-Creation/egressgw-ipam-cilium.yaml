@@ -1,0 +1,26 @@
+apiVersion: eksctl.io/v1alpha5
+kind: ClusterConfig
+
+metadata:
+  name: cluster5
+  region: ap-south-1
+
+managedNodeGroups:
+  - name: worker
+    instanceType: m5.large
+    desiredCapacity: 2
+    privateNetworking: true
+  - name: egress-gw
+    instanceType: m5.large
+    desiredCapacity: 2
+    privateNetworking: true
+    labels:
+      io.cilium/egress-gateway: "true"
+    taints:
+      - key: egress-gw
+        value: "true"
+        effect: NoSchedule
+    subnets:
+      - subnet-0ae7f50fb852ff5fd
+      - subnet-0814bce80cd6370ce
+      - subnet-04d1e1a1525048775
