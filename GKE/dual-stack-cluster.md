@@ -8,5 +8,5 @@ gcloud container clusters create tme-dual-stack \
  --stack-type=ipv4-ipv6 \
  --network=tme-dual-stack \
  --region us-west-2 \
-subnetwork=tme-dual-stack
+ --subnetwork=tme-dual-stack
 ```
