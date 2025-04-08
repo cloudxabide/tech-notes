@@ -1,6 +1,6 @@
 # How to find BW per EC2 instance type?
 
-- In this case this is being done for instance type <m4> and you can simply change the instance type to see BW support per instance type.
+- In this case this is being done for instance type `m4` and you can simply change the instance type to see BW support per instance type.
 
 ```
 aws ec2 describe-instance-types     --filters "Name=instance-type,Values=m4.*"     --query "InstanceTypes[].[InstanceType, NetworkInfo.NetworkPerformance, NetworkInfo.NetworkCards[0]
