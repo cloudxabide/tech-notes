@@ -1,4 +1,3 @@
-rosacli.md
 # How to Upgrade ROSA CLI on your workstation
 This is assuming that <[ROSA CLI](https://docs.redhat.com/en/documentation/red_hat_openshift_service_on_aws/4/html/rosa_cli/rosa-get-started-cli#rosa-setting-up-cli_rosa-getting-started-cli)> has been configured already on your workstation.
 
