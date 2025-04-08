@@ -5,6 +5,7 @@ This is assuming that <[ROSA CLI](https://docs.redhat.com/en/documentation/red_h
 
 ```
 #rosa download rosa-client
+
 I: Downloading https://mirror.openshift.com/pub/openshift-v4/clients/rosa/latest/rosa-linux.tar.gz to your current directory
 Downloading... 36 MB complete
 I: Successfully downloaded rosa-linux.tar.gz
