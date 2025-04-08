@@ -21,6 +21,6 @@ managedNodeGroups:
         value: "true"
         effect: NoSchedule
     subnets:
-      - subnet-#################
-      - subnet-#################
-      - subnet-#################
+      - subnet-0ae7f50fb852ff5fd
+      - subnet-0814bce80cd6370ce
+      - subnet-04d1e1a1525048775
