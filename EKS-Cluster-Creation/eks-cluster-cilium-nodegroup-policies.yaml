@@ -11,7 +11,7 @@ iam:
 
 managedNodeGroups:
    - name: ng-1
-      iam:
+     iam:
         attachPolicyARNs:
           - arn:aws:iam::aws:policy/AmazonEKSWorkerNodePolicy
           - arn:aws:iam::aws:policy/AmazonEKS_CNI_Policy
