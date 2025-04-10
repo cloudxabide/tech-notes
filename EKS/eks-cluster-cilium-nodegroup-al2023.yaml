@@ -1,0 +1,28 @@
+apiVersion: eksctl.io/v1alpha5
+kind: ClusterConfig
+
+metadata:
+  name: cluster1
+  region: ap-northeast-2
+  version: "1.29"
+
+iam:
+  withOIDC: true
+
+managedNodeGroups:
+   - name: workers
+     iam:
+        attachPolicyARNs:
+          - arn:aws:iam::aws:policy/AmazonEKSWorkerNodePolicy
+          - arn:aws:iam::aws:policy/AmazonEKS_CNI_Policy
+          - arn:aws:iam::aws:policy/AmazonEC2ContainerRegistryReadOnly
+          - arn:aws:iam::aws:policy/AmazonSSMManagedInstanceCore
+     desiredCapacity: 2
+     privateNetworking: true
+     instanceType: m5.large
+     ami:
+     amiFamily: AmazonLinux2023
+     taints:
+       - key: "node.cilium.io/agent-not-ready"
+         value: "true"
+         effect: "NoExecute"
