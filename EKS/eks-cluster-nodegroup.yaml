@@ -11,11 +11,11 @@ managedNodeGroups:
   # not scheduled/executed until Cilium is deployed.
   # Alternatively, see the note below.
   iam:
-    attachPolicyARNs:
-        - arn:aws:iam::aws:policy/AmazonEKSWorkerNodePolicy
-        - arn:aws:iam::aws:policy/AmazonEKS_CNI_Policy
-        - arn:aws:iam::aws:policy/AmazonEC2ContainerRegistryReadOnly
-        - arn:aws:iam::aws:policy/AmazonSSMManagedInstanceCore
+     attachPolicyARNs:
+       - arn:aws:iam::aws:policy/AmazonEKSWorkerNodePolicy
+       - arn:aws:iam::aws:policy/AmazonEKS_CNI_Policy
+       - arn:aws:iam::aws:policy/AmazonEC2ContainerRegistryReadOnly
+       - arn:aws:iam::aws:policy/AmazonSSMManagedInstanceCore
   taints:
    - key: "node.cilium.io/agent-not-ready"
      value: "true"

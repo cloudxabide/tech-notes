@@ -14,11 +14,11 @@ availabilityZones: ["us-west-2a", "us-west-2b", "us-west-2c"]
 managedNodeGroups:
   - name: my-efa-ng
     iam:
-        attachPolicyARNs:
-          - arn:aws:iam::aws:policy/AmazonEKSWorkerNodePolicy
-          - arn:aws:iam::aws:policy/AmazonEKS_CNI_Policy
-          - arn:aws:iam::aws:policy/AmazonEC2ContainerRegistryReadOnly
-          - arn:aws:iam::aws:policy/AmazonSSMManagedInstanceCore
+       attachPolicyARNs:
+         - arn:aws:iam::aws:policy/AmazonEKSWorkerNodePolicy
+         - arn:aws:iam::aws:policy/AmazonEKS_CNI_Policy
+         - arn:aws:iam::aws:policy/AmazonEC2ContainerRegistryReadOnly
+         - arn:aws:iam::aws:policy/AmazonSSMManagedInstanceCore
     instanceType: g5.12xlarge
     minSize: 1
     desiredCapacity: 2
