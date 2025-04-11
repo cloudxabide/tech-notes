@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: netshoot
+  labels:
+    run: netshoot
+spec:
+  nodeName: ip-192-168-101-142.ap-northeast-2.compute.internal
+  containers:
+  - name: netshoot
+    image: nicolaka/netshoot:latest
+    command: ["sleep", "infinite"]
