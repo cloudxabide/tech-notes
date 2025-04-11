@@ -1,0 +1,38 @@
+apiVersion: eksctl.io/v1alpha5
+kind: ClusterConfig
+
+metadata:
+     name: cluster6
+     region: ap-south-1
+     version: "1.29"
+
+kubernetesNetworkConfig:
+  ipFamily: IPv6
+
+
+iam:
+  withOIDC: true
+
+addons:
+  - name: vpc-cni
+  - name: coredns
+  - name: kube-proxy
+
+managedNodeGroups:
+   - name: ng-1
+     iam:
+        attachPolicyARNs:
+          - arn:aws:iam::aws:policy/AmazonEKSWorkerNodePolicy
+          - arn:aws:iam::aws:policy/AmazonEKS_CNI_Policy
+          - arn:aws:iam::aws:policy/AmazonEC2ContainerRegistryReadOnly
+          - arn:aws:iam::aws:policy/AmazonSSMManagedInstanceCore
+          - arn:aws:iam::aws:policy/AmazonEKS_CNI_IPv6_Policy
+     desiredCapacity: 2
+     privateNetworking: true
+     # taint nodes so that application pods are
+     # not scheduled/executed until Cilium is deployed.
+     # Alternatively, see the note below.
+     taints:
+       - key: "node.cilium.io/agent-not-ready"
+         value: "true"
+         effect: "NoExecute"
