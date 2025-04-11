@@ -1,4 +1,4 @@
-# How to find the instance ID of an EC2 Instance?
+# How to find the instance ID of an EC2 Instance using AWS CLI?
 
 ```
 #kubectl get nodes -o=custom-columns=NODE:.metadata.name,ARCH:.status.nodeInfo.architecture,OS-Image:.status.nodeInfo.osImage,OS:.status.nodeInfo.operatingSystem,InstanceId:.spec.providerID
