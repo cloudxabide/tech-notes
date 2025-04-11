@@ -1,0 +1,31 @@
+apiVersion: eksctl.io/v1alpha5
+kind: ClusterConfig
+
+metadata:
+     name: cluster2
+     region: ap-northeast-2
+     version: "1.30"
+
+iam:
+  withOIDC: true
+
+privateCluster:
+  enabled: true
+
+managedNodeGroups:
+   - name: ng-1
+     iam:
+        attachPolicyARNs:
+          - arn:aws:iam::aws:policy/AmazonEKSWorkerNodePolicy
+          - arn:aws:iam::aws:policy/AmazonEKS_CNI_Policy
+          - arn:aws:iam::aws:policy/AmazonEC2ContainerRegistryReadOnly
+          - arn:aws:iam::aws:policy/AmazonSSMManagedInstanceCore
+     desiredCapacity: 2
+     privateNetworking: true
+     # taint nodes so that application pods are
+     # not scheduled/executed until Cilium is deployed.
+     # Alternatively, see the note below.
+     taints:
+       - key: "node.cilium.io/agent-not-ready"
+         value: "true"
+         effect: "NoExecute"
