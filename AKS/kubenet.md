@@ -47,10 +47,6 @@ You can deploy your AKS clusters in a dual-stack mode when using [kubenet](http
     - Virtual nodes add-on
     - Windows node pools
 
-### Routing table with next hop pointing to the nodes
-
-![Screenshot 2023-08-16 at 10.20.03 PM.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/1c7f0646-9ea4-4871-b064-e50898b50409/Screenshot_2023-08-16_at_10.20.03_PM.png)
-
 ### Sample API call for creating/updating the Routing Table
 
 ```json
