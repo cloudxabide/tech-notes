@@ -9,8 +9,6 @@ Azure CNI Powered by Cilium can be deployed using two different methods for assi
 
 ## What’s in store for Cilium with Azure CNI powered by Cilium?
 
-Our sales and SE team has to be apprised or be aware of this in particular as this will define the use cases that they can upsell:
-
 Azure CNI offers two IP addressing options for pods: the traditional configuration that assigns VNet IPs to pods and Overlay networking. The choice of which option to use for your AKS cluster is a balance between flexibility and advanced configuration needs. The following considerations help outline when each network model may be the most appropriate.
 
 **Use Overlay networking when**:
