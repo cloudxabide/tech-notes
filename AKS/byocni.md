@@ -1,7 +1,7 @@
 ## What’s in store for Cilium with BYOCNI?
 
 - Installing Cilium in this mode does not have limitations around unmanaged pods because new nodes will wait to get picked up by Cilium before pods are scheduled. However, it does not integrate with the Azure API at all.
-- BYOCNI is not a Cilium feature, but to work on BYOCNI, Cilium uses VXLAN + Cluster Pool IPAM , which are both stable.
+- BYOCNI is not a Cilium feature, but to work on BYOCNI, Cilium uses VXLAN + Cluster Pool IPAM, which are both stable.
     - At the same time, Cilium has limitations on what It can use on BYOCNI, such as **direct routing**.
 
 ## Key points while bringing up an AKS cluster in BYOCNI mode
