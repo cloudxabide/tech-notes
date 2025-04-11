@@ -4,7 +4,7 @@
 
 1. Create an AKS cluster with network-plugin as “kubenet”.
 
-```json
+```bash
 az group create --name nwpluginkubenet --location eastus
 
 az network vnet create \
@@ -26,7 +26,7 @@ az aks create \
 
 1. Calico pods and the operator are configured as a part of a different namespace.
 
-```json
+```bash
 kubectl get pods -A -o wide
 NAMESPACE         NAME                                      READY   STATUS    RESTARTS   AGE   IP            NODE                                NOMINATED NODE   READINESS GATES
 calico-system     calico-kube-controllers-97794b47f-7wwq9   1/1     Running   0          12h   10.244.0.4    aks-nodepool1-12355964-vmss000000   <none>           <none>
@@ -54,7 +54,7 @@ tigera-operator   tigera-operator-65b96c9d94-h4t49          1/1     Running   0 
 
 1. Node-level details show interfaces with prefixes as “calic”
 
-```json
+```bash
 kubectl-node_shell aks-nodepool1-12355964-vmss000000
 spawning "nsenter-nn2t9w" on "aks-nodepool1-12355964-vmss000000"
 If you don't see a command prompt, try pressing enter.
@@ -98,7 +98,7 @@ root@aks-nodepool1-12355964-vmss000000:/# ip a
 
 1. Routing table on the node
 
-```json
+```bash
 route -nv
 Kernel IP routing table
 Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
@@ -117,7 +117,7 @@ Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
 
 1. CNI mapping on the node
 
-```json
+```bash
 cat 10-calico.conflist
 {
   "name": "k8s-pod-network",
@@ -155,7 +155,7 @@ cat 10-calico.conflist
 
  
 
-```json
+```bash
 iptables --list-rules
 -P INPUT ACCEPT
 -P FORWARD ACCEPT
