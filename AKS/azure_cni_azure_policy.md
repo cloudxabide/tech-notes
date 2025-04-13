@@ -1,4 +1,4 @@
-# An AKS cluster with the network plugin as Azure CNI with network policy type as Azure Policy.
+# An AKS cluster with the network plugin as Azure CNI with Azure as the Network Policy.
 
 1. Create an AKS cluster with Network plugin as Azure CNI.
 
