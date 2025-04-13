@@ -1,8 +1,8 @@
-An AKS cluster with the network plugin as Azure CNI can be brought up with network policy type as Azure Policy or Calico.
+# An AKS cluster with the network plugin as Azure CNI with network policy type as Azure Policy.
 
 1. Create an AKS cluster with Network plugin as Azure CNI.
 
-```json
+```
 az group create --name nwpluginazurecniazurepolicy --location australiaeast
 
 az network vnet create \
@@ -26,7 +26,7 @@ az aks get-credentials --resource-group nwpluginazurecniazurepolicy --name nwplu
 
 1. Verify that all pods are up and running
 
-```json
+```
 kubectl get pods -A -o wide
 NAMESPACE     NAME                                  READY   STATUS    RESTARTS   AGE   IP             NODE                                NOMINATED NODE   READINESS GATES
 kube-system   azure-ip-masq-agent-jfhtv             1/1     Running   0          20h   192.168.1.33   aks-nodepool1-29364957-vmss000000   <none>           <none>
@@ -52,7 +52,7 @@ kube-system   metrics-server-555d76c778-cf7p6       2/2     Running   0         
 
 1. Routing table on the node
 
-```json
+```
 route -nv
 Kernel IP routing table
 Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
@@ -69,7 +69,7 @@ Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
 
 1. Interfaces on the node
 
-```json
+```
 1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000
     link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
     inet 127.0.0.1/8 scope host lo
@@ -131,7 +131,7 @@ Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
 
 1. iptables are prefixed with “azure-npm”
 
-```json
+```
 iptables --list-rules
 # Warning: iptables-legacy tables present, use iptables-legacy to see them
 -P INPUT ACCEPT
