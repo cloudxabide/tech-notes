@@ -1,4 +1,4 @@
-# Azure CNI is the legacy or Version 1 of Azure CNI
+# Azure CNI is the legacy or Version 1 of Azure CNI.
 
 With Azure Container Networking Interface (CNI), every pod gets an IP address from the subnet and can be accessed directly. 
 
