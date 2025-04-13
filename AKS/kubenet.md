@@ -1,3 +1,5 @@
+# What is Kubenet?
+- On 31 March 2028, kubenet networking for Azure Kubernetes Service (AKS) will be retired.
 AKS clusters use kubenet and create an Azure virtual network and subnet for you by default. With kubenet, nodes get an IP address from the Azure virtual network subnet. 
 
 - Pods receive an IP address from a logically different address space to the Azure virtual network subnet of the nodes.
