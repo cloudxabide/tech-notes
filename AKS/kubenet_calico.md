@@ -1,4 +1,6 @@
-### Kubenet with Calico
+# Kubenet with Calico as the Network Policy
+
+**On 31 March 2028, kubenet networking for Azure Kubernetes Service (AKS) will be retired.**
 
 ***Note-*** Kubenet can be configured with network policy as Calico only. If you want to enable an AKS cluster to include a [**Calico network policy**](https://docs.projectcalico.org/v3.9/security/calico-network-policy), you can use the following command:
 
@@ -26,7 +28,7 @@ az aks create \
 
 1. Calico pods and the operator are configured as a part of a different namespace.
 
-```bash
+```
 kubectl get pods -A -o wide
 NAMESPACE         NAME                                      READY   STATUS    RESTARTS   AGE   IP            NODE                                NOMINATED NODE   READINESS GATES
 calico-system     calico-kube-controllers-97794b47f-7wwq9   1/1     Running   0          12h   10.244.0.4    aks-nodepool1-12355964-vmss000000   <none>           <none>
@@ -54,7 +56,7 @@ tigera-operator   tigera-operator-65b96c9d94-h4t49          1/1     Running   0 
 
 1. Node-level details show interfaces with prefixes as “calic”
 
-```bash
+```
 kubectl-node_shell aks-nodepool1-12355964-vmss000000
 spawning "nsenter-nn2t9w" on "aks-nodepool1-12355964-vmss000000"
 If you don't see a command prompt, try pressing enter.
@@ -98,7 +100,7 @@ root@aks-nodepool1-12355964-vmss000000:/# ip a
 
 1. Routing table on the node
 
-```bash
+```
 route -nv
 Kernel IP routing table
 Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
@@ -117,8 +119,7 @@ Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
 
 1. CNI mapping on the node
 
-```bash
-cat 10-calico.conflist
+```json
 {
   "name": "k8s-pod-network",
   "cniVersion": "0.3.1",
@@ -153,9 +154,7 @@ cat 10-calico.conflist
 
 1. With no service or app being deployed, we can clearly see a massive iptables list already present with Calico.
 
- 
-
-```bash
+```
 iptables --list-rules
 -P INPUT ACCEPT
 -P FORWARD ACCEPT
