@@ -1,3 +1,5 @@
+**On 31 March 2028, kubenet networking for Azure Kubernetes Service (AKS) will be retired.**
+
 ## **Maximum pods per node**
 
 - The maximum number of pods per node in an AKS cluster is 250. The *default* maximum number of pods per node varies between *kubenet* and *Azure CNI* networking, and the method of cluster deployment.
