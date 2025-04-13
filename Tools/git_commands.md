@@ -2,7 +2,7 @@
 
 Git Commands
 
-1. Core:
+1.Core:
 • git init
 • git clone
 • git add
@@ -17,7 +17,7 @@ Git Commands
 • git push
 • git pull
 
-2. Branching:
+2.Branching:
 • git branch
 • git checkout -b
 • git merge
@@ -26,18 +26,18 @@ Git Commands
 • git branch --unset-upstream
 • git cherry-pick
 
-3. Merging:
+3.Merging:
 • git merge
 • git rebase
 
-4. Stashing:
+4.Stashing:
 • git stash
 • git stash pop
 • git stash list
 • git stash apply
 • git stash drop
 
-5. Remotes:
+5.Remotes:
 • git remote
 • git remote add
 • git remote remove
@@ -46,12 +46,12 @@ Git Commands
 • git push
 • git clone --mirror
 
-6. Configuration:
+6.Configuration:
 • git config
 • git global config
 • git reset config
 
-7. Plumbing:
+7.Plumbing:
 • git cat-file
 • git checkout-index
 • git commit-tree
@@ -69,7 +69,7 @@ Git Commands
 • git tag --list
 • git update-ref
 
-8. Porcelain:
+8.Porcelain:
 • git blame
 • git bisect
 • git checkout
@@ -85,8 +85,8 @@ Git Commands
 • git show
 • git tag
 
-9. Alias:
+9.Alias:
 • git config --global alias.<alias> <command>
 
-10. Hook:
+10.Hook:
 • git config --local core.hooksPath <path>
