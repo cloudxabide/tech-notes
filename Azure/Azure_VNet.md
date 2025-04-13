@@ -3,7 +3,7 @@
 - Azure VNet Encryption went GA on 17/01/2024- https://azure.microsoft.com/en-us/updates/general-availability-azure-virtual-network-encryption-2/
 - Setting up [VNet Encryption](https://learn.microsoft.com/en-us/azure/virtual-network/virtual-network-encryption-overview)
 
-![VNet ENcryption](azure_vnet_encryption.png)
+![VNet Encryption](azure_vnet_encryption.png)
 - The tricky part comes next when the user wants to see the logs that aid in encryption/decryption. This is possible via VNet flow logs- https://learn.microsoft.com/en-us/azure/network-watcher/vnet-flow-logs-cli
 - Where is the encryption terminated?
     - The encryption is terminated at the SmartNIC/FPGA on the Azure Host.
