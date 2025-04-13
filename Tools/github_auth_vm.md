@@ -13,5 +13,5 @@ From https://github.com/amitmavgupta/azure-terraform
  * branch            main       -> FETCH_HEAD
 ```
 ```
-#git push --set-upstream aws-terraform main
+#git push --set-upstream azure-terraform main
 ```
