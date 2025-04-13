@@ -1,9 +1,10 @@
+# Default CNI configurations on AKS clusters.
+
 These are default values when a user brings up an AKS cluster in either of the listed network plugin modes and what the files look like once the AKS cluster has been upgraded to run with Cilium
 
 - **Azure CNI (Default values)- Deprecated**
     
     ```json
-    cat 10-azure.conflist
     {
        "cniVersion":"0.3.0",
        "name":"azure",
@@ -31,8 +32,7 @@ These are default values when a user brings up an AKS cluster in either of the l
 
 - **Azure CNI (After Upgrade to CEE)**
 
-```cpp
-cat 05-cilium.conf
+```json
 {
   "cniVersion": "0.3.1",
   "name": "cilium",
@@ -45,7 +45,6 @@ cat 05-cilium.conf
 - **Azure CNI Overlay (Default values)**
     
     ```json
-    cat 15-azure-swift-overlay.conflist
     {
        "cniVersion":"0.3.0",
        "name":"azure",
@@ -72,8 +71,7 @@ cat 05-cilium.conf
     
 - **Azure CNI Overlay (After Upgrade to CEE)**
 
-```cpp
-cat /etc/cni/net.d/05-cilium.conf
+```json
 {
   "cniVersion": "0.3.1",
   "name": "cilium",
@@ -86,7 +84,6 @@ cat /etc/cni/net.d/05-cilium.conf
 - **Azure CNI (Dynamic IP Allocation)(Default values)**
     
     ```json
-    cat 10-azure.conflist
     {
        "cniVersion":"0.3.0",
        "name":"azure",
@@ -112,8 +109,7 @@ cat /etc/cni/net.d/05-cilium.conf
     
 - **Azure CNI (Dynamic IP Allocation)(After Upgrade to CEE)**
 
-```cpp
-cat /etc/cni/net.d/05-cilium.conf
+```json
 {
   "cniVersion": "0.3.1",
   "name": "cilium",
@@ -125,8 +121,7 @@ cat /etc/cni/net.d/05-cilium.conf
 
 - **Bring your own CNI ( Default has no CNI, and once Cilium is installed, these are the contents of the file)**
     
-    ```jsx
-    cat 05-cilium.conf
+    ```json
     {
       "cniVersion": "0.3.1",
       "name": "cilium",
@@ -138,8 +133,7 @@ cat /etc/cni/net.d/05-cilium.conf
     
 - **Azure CNI powered by Cilium (Default is Cilium)**
     
-    ```jsx
-    cat 05-cilium.conflist
+    ```json
     {
         "cniVersion": "0.3.1",
         "name": "cilium",
@@ -157,9 +151,7 @@ cat /etc/cni/net.d/05-cilium.conf
     
 - **Kubenet (Default is host-local)**
     
-    ```jsx
-    cat /etc/cni/net.d/10-containerd-net.conflist
-    
+    ```json
     {
         "cniVersion": "0.3.1",
         "name": "kubenet",
@@ -188,8 +180,7 @@ cat /etc/cni/net.d/05-cilium.conf
     
     - **Isovalent Enterprise for Cilium in Azure Marketplace (Default is Cilium running as a “delegated plugin”)**
     
-    ```cpp
-    root@aks-default-51761898-vmss000000:/# cat /etc/cni/net.d/05-cilium.conflist
+    ```json
     {
         "cniVersion": "0.3.1",
         "name": "cilium",
