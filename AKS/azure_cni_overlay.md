@@ -1,5 +1,7 @@
 # What is Azure CNI Overlay
-- With Azure CNI Overlay, the cluster nodes are deployed into an Azure Virtual Network (VNet) subnet. 
+
+## Brief
+With Azure CNI Overlay, the cluster nodes are deployed into an Azure Virtual Network (VNet) subnet. 
 
 - Pods are assigned IP addresses from a private CIDR logically different from the VNet hosting the nodes.
 - Pod and node traffic within the cluster use an Overlay network. Network Address Translation (NAT) uses the node's IP address to reach resources outside the cluster.
