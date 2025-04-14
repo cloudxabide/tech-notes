@@ -10,3 +10,6 @@
 ## Registering non-EKS clusters using eksctl
 [EKS-Connector](https://eksctl.io/usage/eks-connector/)
 
+## AZQR tool
+- Azure Quick Review (azqr) is a powerful command-line interface (CLI) tool that specializes in analyzing Azure resources to ensure compliance with Azure's best practices and recommendations. Its main objective is to offer users a comprehensive overview of their Azure resources, allowing them to easily identify any non-compliant configurations or areas for improvement.
+[AZQR](https://github.com/Azure/azqr)
