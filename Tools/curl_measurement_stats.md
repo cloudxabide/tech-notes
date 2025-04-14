@@ -8,7 +8,7 @@
 
 ```
 curl ip.now
-2405:201:d01c:509a:e41a:ce4a:d7e1:fe4c
+3.45.52.110
 
 ==== cURL measurements stats ====
 total: 0.555113 seconds
