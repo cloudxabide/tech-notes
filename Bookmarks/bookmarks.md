@@ -15,4 +15,5 @@
 - Azure Quick Review (azqr) is a powerful command-line interface (CLI) tool that specializes in analyzing Azure resources to ensure compliance with Azure's best practices and recommendations. Its main objective is to offer users a comprehensive overview of their Azure resources, allowing them to easily identify any non-compliant configurations or areas for improvement.
 
 ## Test your portal interface for Azure Managed Applications
+[Read More on Create UI Def](https://learn.microsoft.com/en-us/azure/azure-resource-manager/managed-applications/test-createuidefinition)
 [Create UI Def](https://portal.azure.com/#view/Microsoft_Azure_CreateUIDef/SandboxBlade)
