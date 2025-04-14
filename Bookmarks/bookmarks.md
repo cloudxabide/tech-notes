@@ -18,3 +18,6 @@
 [Read More on Create UI Def](https://learn.microsoft.com/en-us/azure/azure-resource-manager/managed-applications/test-createuidefinition)
 
 [Create UI Def](https://portal.azure.com/#view/Microsoft_Azure_CreateUIDef/SandboxBlade)
+
+## AKS Troubleshooting
+<[Troubleshoot AKS](https://learn.microsoft.com/en-in/troubleshoot/azure/azure-kubernetes/welcome-azure-kubernetes)>
