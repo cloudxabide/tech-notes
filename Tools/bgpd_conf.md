@@ -1,11 +1,6 @@
 # Sample bgpd.conf file
 
 ```
-! -*- bgp -*-
-!
-! BGPd sample configuratin file
-!
-! $Id: bgpd.conf.sample,v 1.1 2002/12/13 20:15:29 paul Exp $
 !
 hostname bgpd
 password quagga

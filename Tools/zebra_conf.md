@@ -1,11 +1,6 @@
 # Sample Zebra.conf file
 
 ```
-! -*- zebra -*-
-!
-! zebra sample configuration file
-!
-! $Id: zebra.conf.sample,v 1.1 2002/12/13 20:15:30 paul Exp $
 !
 hostname Router
 password zebra
