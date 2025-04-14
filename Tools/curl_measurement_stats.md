@@ -1,6 +1,6 @@
 # How can you see connect connect times etc with curl? 
 
-- Simply add this to your .bashrc or .zshrc and every time you run curl you will see some interesting stats
+- Create a file `curlrc` and every time you run curl you will see some interesting stats
 
 ```
 -w "\n\n==== cURL measurements stats ====\ntotal: %{time_total} seconds \nsize: %{size_download} bytes \ndnslookup: %{time_namelookup} seconds \nconnect: %{time_connect} seconds \nappconnect: %{time_appconnect} seconds \nredirect: %{time_redirect} seconds \npretransfer: %{time_pretransfer} seconds \nstarttransfer: %{time_starttransfer} seconds \ndownloadspeed: %{speed_download} byte/sec \nuploadspeed: %{speed_upload} byte/sec \n\n"
