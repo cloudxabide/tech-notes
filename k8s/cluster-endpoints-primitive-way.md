@@ -65,3 +65,9 @@ done
 ```
 #curl --cacert ${CACERT} --header "Authorization: Bearer ${TOKEN}" -X GET ${APISERVER}/api
 ```
+
+# Alternatively you can also do
+```
+#aws eks describe-cluster --name cluster6 | jq -r .cluster.endpoint
+https://123456789123456789.gr7.ap-northeast-2.eks.amazonaws.com
+```
