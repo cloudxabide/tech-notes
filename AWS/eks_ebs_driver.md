@@ -4,7 +4,7 @@
 - Under permissions, click on Add permissions from the Dropdown.
 - Attach policies
 - Search for the term ‘EBS’
-- Click on ’[AmazonEBSCSIDriverPolicy]
+- Click on ’AmazonEBSCSIDriverPolicy’
 - Add permission.
 
 ## Install the drivers:
