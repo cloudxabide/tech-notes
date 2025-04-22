@@ -14,8 +14,5 @@ To further debug and diagnose cluster problems, use 'kubectl cluster-info dump'.
 - Another way to find the endpoints is
 ```
 #aws eks describe-cluster --name cluster6 | jq -r .cluster.endpoint
-```
-
-```
 https://123456789123456789.gr7.ap-northeast-2.eks.amazonaws.com
 ```
