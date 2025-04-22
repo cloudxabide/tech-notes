@@ -1,5 +1,7 @@
 # How to set DNS name for a k8s service?
 
+- Key is to use a unique name for the k8s service.
+
 ```yaml
 ---
 apiVersion: v1
