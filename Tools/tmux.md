@@ -22,4 +22,5 @@ Open a tree of all the sessions you can navigate with arrow keys
 - Ctrl+b, x
 Close the current pane.
 - Ctrl+b, $ leads to renaming the session
-- Renaming the window tmux rename-window <name>
+- tmux rename-window <name>
+Renaming the window
