@@ -1,4 +1,4 @@
-# List of basic terraform commands
+# Basic terraform commands
 
 - terraform init
 - terraform fmt
