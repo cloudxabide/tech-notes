@@ -28,7 +28,7 @@ kube-system       Active        19h
   "apiVersion": "v1",
   "metadata": {
     "name": "cilium-secrets",
-    "uid": "83342612-d052-4c5e-9f32-e4f471d502dd",
+    "uid": "################################",
     "resourceVersion": "9518",
     "creationTimestamp": "2024-06-05T14:11:43Z",
     "deletionTimestamp": "2024-06-05T14:12:23Z",
