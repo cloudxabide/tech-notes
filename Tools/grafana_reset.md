@@ -3,7 +3,7 @@
 ```
 #docker exec -it <name of grafana container> grafana-cli admin reset-admin-password <fill in password>
 ```
-- To find the password for grafana
+- To find the password for Grafana
 
 ```
 #kubectl get secret prometheus-grafana -oyaml -n monitoring
