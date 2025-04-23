@@ -3,6 +3,7 @@
 ```
 - Microsoft.Network/virtualNetworks/subnets/join/action
 - Microsoft.Network/virtualNetworks/subnets/read
+- Microsoft.Network/loadBalancers/write
 ```
 
 ```
