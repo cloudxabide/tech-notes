@@ -1,5 +1,7 @@
 # How to find the architecture type of Kubernetes nodes?
 
+- In the example below we find that the nodes have been created using `arm64` as the architecture.
+
 ```
 kubectl get no -L kubernetes.io/arch
 NAME                                                 STATUS   ROLES    AGE   VERSION                ARCH
