@@ -5,8 +5,8 @@
 ```
 - To find the password for grafana
 
-```yaml
-kubectl get secret prometheus-grafana -oyaml -n monitoring
+```
+#kubectl get secret prometheus-grafana -oyaml -n monitoring
 apiVersion: v1
 data:
   admin-password: c12345678912345678==
