@@ -24,3 +24,6 @@
 
 ## Azure Kubelogin
 [Kubelogin](https://azure.github.io/kubelogin/index.html)
+
+## Pod Info
+[Pod Info](https://docs.google.com/document/d/1MlOEoNr8j0LlD2w5RMb6E8R55e93aWpzWLgFAIctn8o/edit?usp=sharing)
