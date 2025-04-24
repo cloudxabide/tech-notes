@@ -10,3 +10,11 @@ external-envoy-proxy                              false
 - Our Helm charts automatically enable endpoint routes automatically if you use the eni, gke or azure Helm values (e.g. gke.enabled=true, grep for enable-endpoint-routes: "true" in cilium-configmap.yaml).
 - On Azure, ENI and AlibabCloud, Cilium-Agent will auto-derive the ipv4-native-routing-cidr (code here), so you don’t have to set it manually. On GKE however, you do have to set it, since we don’t have the code for auto-detection.
 - You don’t have to explicitly set endpoint routes, and you only have to explicitly set the native-routing-cidr on GKE.
+
+### Is there a way to connect hubble client to a hubble server running on a cilium agent (as opposed to hubble relay)?
+```
+#kubectl -n kube-system exec $CILIUM_POD -- hubble observe
+```
+
+### Gateway API and Annotations
+- Gateway api controller passes those annotations from `spec.infrastructure` to k8 service annotations and then AWS LB controller creates an NLB accordingly.
