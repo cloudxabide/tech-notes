@@ -41,3 +41,15 @@
 
 ## Cirros Images
 [Download Cirros](https://download.cirros-cloud.net/0.6.3/)
+
+## Run Cilium on WSL2
+[Cilium on WSL2-Github Link](https://github.com/cilium/cilium/issues/29302)
+
+## OpenShift Virt Lab
+[OpenShift-Virt-Lab](https://www.stb.id.au/blog/openshift-virt-lab)
+
+## Download virtctl
+[Install virtctl](https://kubevirt.io/user-guide/user_workloads/virtctl_client_tool/)
+
+## Enable nested virtualisation on a VM in Azure
+[Nested Virt on d4sv3](https://learn.microsoft.com/en-us/answers/questions/1405242/how-to-enable-nested-virtualization-on-d4s-v3)
