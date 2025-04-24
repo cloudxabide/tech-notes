@@ -19,7 +19,7 @@ external-envoy-proxy                              false
 ### Gateway API and Annotations
 - Gateway api controller passes those annotations from `spec.infrastructure` to k8 service annotations and then AWS LB controller creates an NLB accordingly.
 
-## ENI IPAM and Delegated IPAM
+### ENI IPAM and Delegated IPAM
 
 - Basically, with ENI and Azure (“legacy”) IPAM there is an IPAM subsystem within Cilium-Agent. The Cilium CNI plugin, whenever a pod is scheduled, then just asks the agent for IPs. The allocation for daemon-owned IPs (cilium_host aka router, cilium-health and ingress) that do not go through the CNI plugin also happens to ask the internal IPAM allocator.
 
