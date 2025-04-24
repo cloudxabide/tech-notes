@@ -1,6 +1,6 @@
 # GKE no Kube-Proxy Removal Manifest for DataPlane V1
 
-- [GKE no Kube-Proxy](https://medium.com/@amitmavgupta/cilium-installing-cilium-in-gke-with-no-kube-proxy-826e84f971b4)
+- [Blog for GKE no Kube-Proxy](https://medium.com/@amitmavgupta/cilium-installing-cilium-in-gke-with-no-kube-proxy-826e84f971b4)
 
 ```
 apiVersion: v1
