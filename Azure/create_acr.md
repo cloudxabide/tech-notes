@@ -41,10 +41,10 @@
 
 - How to find the resource-id of the ACR repo?
 ```
-#az role assignment list --scope /subscriptions/8dbd2563-77eb-41a1-917b-5a1344da9767/resourceGroups/repoacr/providers/Microsoft.ContainerRegistry/registries/testacrrepo -o table
+#az role assignment list --scope /subscriptions/####################################/resourceGroups/repoacr/providers/Microsoft.ContainerRegistry/registries/testacrrepo -o table
 ```
 
 - Update the AKS cluster with AcrPull role assignment
 ```
-#az aks update -n byocniacr -g repoacr --attach-acr /subscriptions/8dbd2563-77eb-41a1-917b-5a1344da9767/resourceGroups/repoacr/providers/Microsoft.ContainerRegistry/registries/testacrrepo
+#az aks update -n byocniacr -g repoacr --attach-acr /subscriptions/#################################/resourceGroups/repoacr/providers/Microsoft.ContainerRegistry/registries/testacrrepo
 ```
