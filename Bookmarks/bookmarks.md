@@ -35,3 +35,9 @@
 ## Pod Errors (Too Many Files) in a Kind Cluster.
 - This may be caused by running out of inotify resources.
 [Error-Too Many files](https://kind.sigs.k8s.io/docs/user/known-issues/#pod-errors-due-to-too-many-open-files)
+
+## Installing Cilium with HyperShift (OpenShift)
+[HyperShift](https://hypershift-docs.netlify.app/how-to/agent/other-sdn-providers/#cilium)
+
+## Cirros Images
+[Download Cirros](https://download.cirros-cloud.net/0.6.3/)
