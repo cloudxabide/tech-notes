@@ -90,7 +90,7 @@ az aks create -n azrdma -g azrdma \\
 ```
 - Ensure that the nodes are up and running
 ```
-kubectl get nodes -A -o wide
+#kubectl get nodes -A -o wide
 NAME                                STATUS   ROLES   AGE     VERSION   INTERNAL-IP   EXTERNAL-IP   OS-IMAGE             KERNEL-VERSION      CONTAINER-RUNTIME
 aks-nodepool1-27006571-vmss000000   Ready    agent   3h20m   v1.27.9   10.224.0.4    <none>        Ubuntu 22.04.4 LTS   5.15.0-1057-azure   containerd://1.7.7-1
 aks-nodepool1-27006571-vmss000001   Ready    agent   3h19m   v1.27.9   10.224.0.5    <none>        Ubuntu 22.04.4 LTS   5.15.0-1057-azure   containerd://1.7.7-1
