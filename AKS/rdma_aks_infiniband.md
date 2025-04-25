@@ -18,10 +18,8 @@
 ```
 
 ```
-az extension add --name k8s-extension
+#az extension add --name k8s-extension
 Default enabled including preview versions for extension installation now. Disabled in May 2024. Use '--allow-preview true' to enable it specifically if needed. Use '--allow-preview false' to install stable version only.
-Extension 'k8s-extension' 1.6.0 is already installed.
-az extension  add -n ml
 ```
 - Create an AKS cluster
 ```
