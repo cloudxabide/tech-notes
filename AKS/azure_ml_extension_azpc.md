@@ -39,7 +39,7 @@ Default enabled including preview versions for extension installation now. Disab
 - Attach a Kubernetes cluster to the Azure Machine Learning workspace
 
 ```
-#az ml compute attach --resource-group azml --workspace-name azml --type Kubernetes --name k8s-compute --resource-id "/subscriptions/8dbd2563-77eb-41a1-917b-5a1344da9767/resourceGroups/azml/providers/Microsoft.ContainerService/managedclusters/azml" --identity-type SystemAssigned --namespace azureml --no-wait
+#az ml compute attach --resource-group azml --workspace-name azml --type Kubernetes --name k8s-compute --resource-id "/subscriptions/####################################/resourceGroups/azml/providers/Microsoft.ContainerService/managedclusters/azml" --identity-type SystemAssigned --namespace azureml --no-wait
 ```
 
 - Check that the pods are up and running
