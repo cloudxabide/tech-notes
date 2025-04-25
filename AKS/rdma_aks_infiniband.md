@@ -31,7 +31,7 @@ az aks create -n azrdma -g azrdma \\
 ```
 - Add a nodegroup based on HBv3 and HBv4 HPC VM sizes that support Infiniband on AKS.
 ```
-az aks nodepool add --resource-group azrdma --cluster-name azrdma --name rdmanp --node-count 2 --node-vm-size Standard_HB120rs_v3
+#az aks nodepool add --resource-group azrdma --cluster-name azrdma --name rdmanp --node-count 2 --node-vm-size Standard_HB120rs_v3
 {
   "availabilityZones": null,
   "capacityReservationGroupId": null,
