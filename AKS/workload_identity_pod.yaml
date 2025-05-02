@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: azcli-deployment
+  labels:
+    app: azcli
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: azcli
+  template:
+    metadata:
+      labels:
+        app: azcli
+    spec:
+      serviceAccount: fed-sa
+      containers:
+        - name: azcli
+          image: mcr.microsoft.com/azure-cli:latest
+          command:
+            - "/bin/bash"
+            - "-c"
+            - "sleep infinity"
