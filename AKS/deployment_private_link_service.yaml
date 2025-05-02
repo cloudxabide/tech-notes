@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nginxtest-deployment
+  labels:
+    app: nginxtest-deployment
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: nginxamit
+  template:
+    metadata:
+      labels:
+        app: nginxamit
+    spec:
+      containers:
+      - name: nginxamit
+        image: testacrrepo.azurecr.io/mycustomimage/nginxamit
+        ports:
+        - containerPort: 80
