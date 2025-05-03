@@ -1,0 +1,118 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
+    "contentVersion": "1.0.0.0",
+    "outputs": {},
+    "parameters": {
+      "clusterResourceName": {
+        "metadata": {
+          "description": "armmktplace"
+        },
+        "type": "string"
+      },
+      "createNewCluster": {
+        "defaultValue": false,
+        "metadata": {
+          "description": "When set to 'true', creates new AKS cluster. Otherwise, an existing cluster is used."
+        },
+        "type": "bool"
+      },
+      "extensionResourceName": {
+        "metadata": {
+          "description": "cilium"
+        },
+        "type": "string"
+      },
+      "location": {
+        "metadata": {
+          "description": "canadacentral"
+        },
+        "type": "string"
+      },
+      "vmSize": {
+        "defaultValue": "Standard_DS2_v2",
+        "metadata": {
+          "description": "VM size"
+        },
+        "type": "String"
+      }
+    },
+    "resources": [
+      {
+        "apiVersion": "2023-01-02-preview",
+        "condition": "[parameters('createNewCluster')]",
+        "dependsOn": [],
+        "identity": {
+          "type": "SystemAssigned"
+        },
+        "location": "[parameters('location')]",
+        "name": "[parameters('clusterResourceName')]",
+        "properties": {
+          "agentPoolProfiles": [
+            {
+              "count": 3,
+              "enableAutoScaling": true,
+              "enableNodePublicIP": false,
+              "maxCount": 10,
+              "maxPods": 110,
+              "minCount": 2,
+              "mode": "System",
+              "name": "agentpool",
+              "osType": "Linux",
+              "storageProfile": "ManagedDisks",
+              "type": "VirtualMachineScaleSets",
+              "vmSize": "[parameters('vmSize')]"
+            }
+          ],
+          "dnsPrefix": "[parameters('clusterResourceName')]",
+          "networkProfile": {
+            "ebpfDataplane": "cilium",
+            "loadBalancerSku": "standard",
+            "networkPlugin": "azure",
+            "networkPluginMode": "overlay"
+          }
+        },
+        "sku": {
+          "name": "Basic",
+          "tier": "Free"
+        },
+        "tags": {},
+        "type": "Microsoft.ContainerService/managedClusters"
+      },
+      {
+        "apiVersion": "2022-11-01",
+        "dependsOn": [
+          "[resourceId('Microsoft.ContainerService/managedClusters/', parameters('clusterResourceName'))]"
+        ],
+        "name": "[parameters('extensionResourceName')]",
+        "plan": {
+          "name": "[variables('plan-name')]",
+          "product": "[variables('plan-offerID')]",
+          "publisher": "[variables('plan-publisher')]"
+        },
+              "properties": {
+          "autoUpgradeMinorVersion": true,
+          "configurationProtectedSettings": {},
+          "configurationSettings": {
+            "namespace": "kube-system",
+            "hubble.enabled": true,
+            "hubble.relay.enabled": true,
+            "encryption.enabled"  : true,
+            "encryption.type"     : "wireguard",
+            "l7Proxy"		: false,
+        "external-dns-proxy"  : true
+          },
+          "extensionType": "[variables('clusterExtensionTypeName')]",
+          "releaseTrain": "[variables('releaseTrain')]"
+        },
+        "scope": "[concat('Microsoft.ContainerService/managedClusters/', parameters('clusterResourceName'))]",
+        "type": "Microsoft.KubernetesConfiguration/extensions"
+      }
+    ],
+    "variables": {
+      "clusterExtensionTypeName": "Isovalent.CiliumEnterprise.One",
+      "plan-name": "isovalent-cilium-enterprise-base-edition",
+      "plan-offerID": "isovalent-cilium-enterprise",
+      "plan-publisher": "#######################",
+      "releaseTrain": "stable"
+    }
+  }
