@@ -1,0 +1,33 @@
+# Basic ingress for istio bookinfo demo application, which can be found in below
+# https://raw.githubusercontent.com/istio/istio/release-1.11/samples/bookinfo/platform/kube/bookinfo.yaml
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: basic-ingress
+  namespace: default
+  annotations:
+    service.beta.kubernetes.io/azure-load-balancer-internal: "true"
+    #service.beta.kubernetes.io/azure-dns-label-name: "tmetesting"
+    #service.beta.kubernetes.io/azure-load-balancer-internal-subnet: "app-testing"
+    #service.beta.kubernetes.io/azure-load-balancer-ipv4: "10.228.0.4"
+    #service.beta.kubernetes.io/azure-load-balancer-ipv6: "fd87:ef94:e938:40b4::4"
+    #service.beta.kubernetes.io/azure-load-balancer-resource-group: "app-testing"
+spec:
+  ingressClassName: cilium
+  rules:
+  - http:
+      paths:
+      - backend:
+          service:
+            name: details
+            port:
+              number: 9080
+        path: /details
+        pathType: Prefix
+      - backend:
+          service:
+            name: productpage
+            port:
+              number: 9080
+        path: /
+        pathType: Prefix
