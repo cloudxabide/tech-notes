@@ -1,0 +1,27 @@
+apiVersion: isovalent.com/v1
+kind: IsovalentEgressGatewayPolicy
+metadata:
+  labels:
+    egw: bgp-advertise
+  name: egw-advertise
+spec:
+  destinationCIDRs:
+  - 8.8.8.8/32
+  egressGroups:
+  - egressIP: 10.0.100.1
+    maxGatewayNodes: 1
+    nodeSelector:
+      matchLabels:
+        egressGW: use
+  selectors:
+  - podSelector:
+      matchLabels:
+        app: curl
+status:
+  groupStatuses:
+  - activeGatewayIPs:
+    - 10.0.17.238
+    healthyGatewayIPs:
+    - 10.0.17.238
+    - 10.0.5.189
+  observedGeneration: 2

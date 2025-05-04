@@ -1,0 +1,48 @@
+apiVersion: isovalent.com/v1alpha1
+kind: IsovalentBGPClusterConfig
+metadata:
+  name: cilium-bgp1
+spec:
+  nodeSelector:
+    matchLabels:
+      cilium-bgp-peering: instance-1
+  bgpInstances:
+  - name: "instance1-65002"
+    localASN: 65002
+    peers:
+    - name: "fw-1"
+      peerASN: 65001
+      peerAddress: 10.0.6.210
+      peerConfigRef:
+        name: "fw-1"
+    - name: "fw-2"
+      peerASN: 65001
+      peerAddress: 10.0.5.189
+      peerConfigRef:
+        name: "fw-2"
+---
+apiVersion: isovalent.com/v1alpha1
+kind: IsovalentBGPPeerConfig
+metadata:
+  name: fw-1
+spec:
+  ebgpMultihop: 4
+  families:
+    - afi: ipv4
+      safi: unicast
+      advertisements:
+        matchLabels:
+          advertise: "bgp"
+---
+apiVersion: isovalent.com/v1alpha1
+kind: IsovalentBGPAdvertisement
+metadata:
+  name: bgp-advertisements
+  labels:
+    advertise: bgp
+spec:
+  advertisements:
+    - advertisementType: "EgressGateway"
+      selector:            
+        matchExpressions:
+          - {key: somekey, operator: NotIn, values: ['never-used-value']}
