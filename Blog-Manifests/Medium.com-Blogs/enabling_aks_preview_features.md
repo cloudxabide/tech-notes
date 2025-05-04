@@ -1,5 +1,6 @@
+# How to enable preview Features?
 
-
+## KataVMIsovalation
 ```
 #az feature register --namespace "Microsoft.ContainerService" --name "KataVMIsolationPreview"
 Once the feature 'KataVMIsolationPreview' is registered, invoking 'az provider register -n Microsoft.ContainerService' is required to get the change propagated
