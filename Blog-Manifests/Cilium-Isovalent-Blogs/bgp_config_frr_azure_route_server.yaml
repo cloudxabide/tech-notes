@@ -1,0 +1,17 @@
+router bgp 64512
+ neighbor 10.1.0.4 remote-as 65515
+ neighbor 10.1.0.4 ebgp-multihop 5
+ neighbor 10.1.0.5 remote-as 65515
+ neighbor 10.1.0.5 ebgp-multihop 5
+ neighbor 192.168.121.204 remote-as 64512
+ neighbor 192.168.121.245 remote-as 64512
+ !
+ address-family ipv4 unicast
+  network 10.1.0.0/24
+  neighbor 10.1.0.4 filter-list everything in
+  neighbor 10.1.0.4 filter-list own-as out
+  neighbor 10.1.0.5 filter-list everything in
+  neighbor 10.1.0.5 filter-list own-as out
+ exit-address-family
+exit
+!
