@@ -1,7 +1,7 @@
 # Nested Virt in Azure on a D4sV3 VM
 
 - Please confirm that your VM is set to Security type: Standard.
-![Nested Virt](Azure/Diagrams/5.png)
+![Nested Virt](5.png)
 
 ```
 # lsmod | grep kvm
