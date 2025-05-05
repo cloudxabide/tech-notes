@@ -56,3 +56,9 @@
 
 ## Network Policy in Cilium- Philip Schmid
 [cilium-netpol-demo](https://github.com/PhilipSchmid/cilium-netpol-demo/tree/main)
+
+## AKS Marketplace Extension Troubleshooting
+[Cluster-Extension-Troubleshooting](https://learn.microsoft.com/en-us/troubleshoot/azure/azure-kubernetes/extensions/cluster-extension-deployment-errors)
+
+## Maximum IP addresses per network interface
+[IPperENI](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/AvailableIpPerENI.html)
