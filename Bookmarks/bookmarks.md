@@ -53,3 +53,6 @@
 
 ## Enable nested virtualisation on a VM in Azure
 [Nested Virt on d4sv3](https://learn.microsoft.com/en-us/answers/questions/1405242/how-to-enable-nested-virtualization-on-d4s-v3)
+
+## Network Policy in Cilium- Philip Schmid
+[cilium-netpol-demo](https://github.com/PhilipSchmid/cilium-netpol-demo/tree/main)
