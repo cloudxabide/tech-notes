@@ -1,0 +1,21 @@
+apiVersion: isovalent.com/v1
+kind: IsovalentEgressGatewayPolicy
+metadata:
+  name: egress-sample
+spec:
+  destinationCIDRs:
+  - "192.168.11.16/32"
+  selectors:
+  - podSelector: {}
+  azAffinity: disabled
+  egressGroups:
+  -
+    nodeSelector:
+      matchLabels:
+        egress-node: "true"
+        topology.kubernetes.io/zone: canadacentral-1
+  -
+    nodeSelector:
+      matchLabels:
+        egress-node: "true"
+        topology.kubernetes.io/zone: canadacentral-2

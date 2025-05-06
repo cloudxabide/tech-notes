@@ -1,0 +1,14 @@
+apiVersion: isovalent.com/v1
+kind: IsovalentEgressGatewayPolicy
+metadata:
+  name: egress-sample
+spec:
+  destinationCIDRs:
+  - "0.0.0.0/0"
+  selectors:
+  - podSelector: {}
+  egressGroups:
+  -
+    nodeSelector:
+      matchLabels:
+        egress-node: "true"
