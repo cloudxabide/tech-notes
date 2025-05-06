@@ -1,0 +1,19 @@
+apiVersion: isovalent.com/v1
+kind: IsovalentEgressGatewayPolicy
+metadata:
+  name: egress-sample
+  labels:
+    egw: bgp-advertise
+spec:
+  destinationCIDRs:
+  - 0.0.0.0/0
+  egressCIDRs:
+  - 10.100.255.50/28
+  - 10.100.255.100/28
+  selectors:
+  - podSelector: {}
+  egressGroups:
+  -
+    nodeSelector:
+      matchLabels:
+        egress-node: "true"
