@@ -21,19 +21,19 @@
 - Download the EKS Anywhere artifacts that contain the list and locations of the EKS Anywhere dependencies. A compressed file `eks-anywhere-downloads.tar.gz` will be downloaded. You can use the eksctl anywhere download artifacts `--dry-run` command to see the list of artifacts it will download.
 
 ```
-#eksctl anywhere download artifacts
+eksctl anywhere download artifacts
 ```
 
 - Decompress the eks-anywhere-downloads.tar.gz file using the following command. This will create an `eks-anywhere-downloads` folder.
 
 ```
-#tar -xvf eks-anywhere-downloads.tar.gz
+tar -xvf eks-anywhere-downloads.tar.gz
 ```
 
 - Download the EKS Anywhere image dependencies to the Admin machine. This command may take several minutes (10+) to complete. To monitor the progress of the command, you can run with the `-v 6` command line argument, which will show details of the images that are being pulled. Docker must be running for the following command to succeed.
 
 ```
-#eksctl anywhere download images -o images.tar
+eksctl anywhere download images -o images.tar
 Pulling images from origin, this might take a while
 Writing images to disk
 Pulling images from origin, this might take a while
@@ -51,8 +51,9 @@ Packaging artifacts	{"dst": "images.tar"}
 - Create the cluster
 
 ```
-#eksctl anywhere generate clusterconfig eksaprivate --provider docker > eksaprivate.yaml
-#eksctl anywhere create cluster -f eksaprivate.yaml --bundles-override ./eks-anywhere-downloads/bundle-release.yaml
+eksctl anywhere generate clusterconfig eksaprivate --provider docker > eksaprivate.yaml
+
+eksctl anywhere create cluster -f eksaprivate.yaml --bundles-override ./eks-anywhere-downloads/bundle-release.yaml
 Performing setup and validations
 Warning: The docker infrastructure provider is meant for local development and testing only
 ✅ Docker Provider setup is valid

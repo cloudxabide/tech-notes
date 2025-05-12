@@ -6,7 +6,7 @@ kubectl get clusters <cluster-name> -o yaml
 # Delete an EKS-A cluster
 
 ```
-#eksctl anywhere delete cluster mgmt -f mgmt.yaml
+eksctl anywhere delete cluster mgmt -f mgmt.yaml
 ```
 
 ```
