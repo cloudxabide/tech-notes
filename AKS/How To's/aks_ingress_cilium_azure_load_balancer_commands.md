@@ -3,7 +3,7 @@
 ## How can we check if the internal load balancer was created in the subnet that was chosen by the annotation `service.beta.kubernetes.io/azure-load-balancer-internal: "true"` (IPv4)
 
 ```
-#az network vnet subnet show --resource-group MC_byocni_amit_eastus --vnet-name aks-vnet-17718742 --name app-testing
+az network vnet subnet show --resource-group MC_byocni_amit_eastus --vnet-name aks-vnet-17718742 --name app-testing
 
 {
   "addressPrefix": "10.228.0.0/28",
@@ -36,7 +36,7 @@
 ## How can we check if the internal load balancer was created in the subnet that was chosen by the annotation `service.beta.kubernetes.io/azure-load-balancer-internal: "true"` (Dual Stack)
 
 ```
-#az network vnet subnet show --resource-group MC_byocnids_byocnids_southindia --vnet-name aks-vnet-14676014 --name dsapp-testing
+az network vnet subnet show --resource-group MC_byocnids_byocnids_southindia --vnet-name aks-vnet-14676014 --name dsapp-testing
 {
   "addressPrefixes": [
     "10.225.0.0/24",
@@ -75,7 +75,7 @@
 ## How to check if the load balancer that was created internally is attached in the respective subnet or other way around how to check for a connected device in an Azure subnet? (IPv4)
 
 ```
-#az network vnet subnet show -g MC_byocni_amit_eastus  -n app-testing --vnet-name aks-vnet-17718742 -o json| jq ".ipConfigurations[].id"
+az network vnet subnet show -g MC_byocni_amit_eastus  -n app-testing --vnet-name aks-vnet-17718742 -o json| jq ".ipConfigurations[].id"
 
 "/subscriptions/######################################/resourceGroups/MC_BYOCNI_AMIT_EASTUS/providers/Microsoft.Network/loadBalancers/KUBERNETES-INTERNAL/frontendIPConfigurations/A7FF28CD359364E1984189FEC79574E2-APP-TESTING"
 ```
@@ -91,7 +91,7 @@
 - This is available only for IPv4 and not Dual Stack subnets.
 
 ```
-#az network vnet subnet list-available-ips --resource-group MC_byocni_amit_eastus --vnet-name aks-vnet-17718742 --name app-testing
+az network vnet subnet list-available-ips --resource-group MC_byocni_amit_eastus --vnet-name aks-vnet-17718742 --name app-testing
 [
   "10.228.0.5",
   "10.228.0.6",
@@ -104,7 +104,7 @@
 ## How to list the frontend IP for the load balancer (IPv4)
 
 ```
-#az network lb frontend-ip list --lb-name kubernetes-internal --resource-group MC_byocni_amit_eastus
+az network lb frontend-ip list --lb-name kubernetes-internal --resource-group MC_byocni_amit_eastus
 [
   {
     "etag": "W/\\"######################################\\"",
@@ -141,7 +141,7 @@
 ## How to list the frontend IP for the load balancer (Dual Stack)
 
 ```
-#az network lb frontend-ip list --lb-name kubernetes-internal --resource-group MC_byocnids_byocnids_southindia
+az network lb frontend-ip list --lb-name kubernetes-internal --resource-group MC_byocnids_byocnids_southindia
 
 [
   {

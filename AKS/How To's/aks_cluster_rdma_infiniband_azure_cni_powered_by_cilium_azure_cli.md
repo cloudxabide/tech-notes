@@ -9,16 +9,16 @@
 
 - Create a Resource Group
 ```
-#az group create --name azrdma --location uksouth
+az group create --name azrdma --location uksouth
 ```
 - Register and add the extensions
 ```
-#az provider register --namespace Microsoft.ContainerService --wait
-#az provider register --namespace Microsoft.KubernetesConfiguration --wait
+az provider register --namespace Microsoft.ContainerService --wait
+az provider register --namespace Microsoft.KubernetesConfiguration --wait
 ```
 
 ```
-#az extension add --name k8s-extension
+az extension add --name k8s-extension
 Default enabled including preview versions for extension installation now. Disabled in May 2024. Use '--allow-preview true' to enable it specifically if needed. Use '--allow-preview false' to install stable version only.
 ```
 - Create an AKS cluster
@@ -31,7 +31,7 @@ az aks create -n azrdma -g azrdma \\
 ```
 - Add a nodegroup based on HBv3 and HBv4 HPC VM sizes that support Infiniband on AKS.
 ```
-#az aks nodepool add --resource-group azrdma --cluster-name azrdma --name rdmanp --node-count 2 --node-vm-size Standard_HB120rs_v3
+az aks nodepool add --resource-group azrdma --cluster-name azrdma --name rdmanp --node-count 2 --node-vm-size Standard_HB120rs_v3
 {
   "availabilityZones": null,
   "capacityReservationGroupId": null,
@@ -90,7 +90,7 @@ az aks create -n azrdma -g azrdma \\
 ```
 - Ensure that the nodes are up and running
 ```
-#kubectl get nodes -A -o wide
+kubectl get nodes -A -o wide
 NAME                                STATUS   ROLES   AGE     VERSION   INTERNAL-IP   EXTERNAL-IP   OS-IMAGE             KERNEL-VERSION      CONTAINER-RUNTIME
 aks-nodepool1-27006571-vmss000000   Ready    agent   3h20m   v1.27.9   10.224.0.4    <none>        Ubuntu 22.04.4 LTS   5.15.0-1057-azure   containerd://1.7.7-1
 aks-nodepool1-27006571-vmss000001   Ready    agent   3h19m   v1.27.9   10.224.0.5    <none>        Ubuntu 22.04.4 LTS   5.15.0-1057-azure   containerd://1.7.7-1
