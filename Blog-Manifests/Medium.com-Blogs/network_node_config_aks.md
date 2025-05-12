@@ -3,7 +3,7 @@
 [Azure Delegated Ipam allocator](https://docs.cilium.io/en/stable/network/concepts/ipam/azure-delegated-ipam/) builds on top of CRD-backed allocator. AKS control plane creates NodeNetworkConfig custom resource on each node matching node name.
 
 ```
-#kubectl get nnc -A -ojson
+kubectl get nnc -A -ojson
 ```
 
 ```json
