@@ -27,8 +27,6 @@
 
 #az network vnet subnet create -g byocni --vnet-name byocni-vnet --name byocni-subnet --address-prefixes 192.168.10.0/24 -o none 
 
-#az network vnet subnet create -g byocni --vnet-name byocni-vnet --name egressgw-subnet --address-prefixes 192.168.11.0/24 -o none 
-
 #az aks create -l eastus -g byocni -n byocni --network-plugin none --vnet-subnet-id /subscriptions/#############################/resourceGroups/byocni/providers/Microsoft.Network/virtualNetworks/byocni-vnet/subnets/byocni-subnet
 
 #az aks get-credentials --resource-group byocni --name byocni
