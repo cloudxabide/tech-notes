@@ -21,7 +21,7 @@
 ## AKS cluster creation in BYOCNI mode
 
 ```
-#az group create -l eastus -n byocni
+#az group create -l canadacentral -n byocni
 
 #az network vnet create -g byocni --location canadacentral --name byocni-vnet --address-prefixes 192.168.8.0/22 -o none
 
