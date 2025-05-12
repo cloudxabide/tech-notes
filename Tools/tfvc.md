@@ -3,7 +3,7 @@
 - It is a reporting tool to identify available updates for providers and modules referenced in your Terraform code. It provides clear warning/failure output and resolution guidance for any issues it detects.
 
 ```
-#tfvc .
+tfvc .
 
 provider 'hashicorp/random' WARNING Latest match newer than .terraform.lock.hcl config
 ──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────

@@ -1,7 +1,7 @@
 # How to see the next hop table in FRR?
 
 ```
-# sh ip nht
+sh ip nht
 ```
 ```
 VRF default:

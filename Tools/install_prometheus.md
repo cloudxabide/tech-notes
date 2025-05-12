@@ -3,7 +3,7 @@
 - Add the helm repo 
 
 ```
-#helm repo add prometheus-community https://prometheus-community.github.io/helm-charts
+helm repo add prometheus-community https://prometheus-community.github.io/helm-charts
 ```
 
 - Upgrade the cluster
@@ -26,5 +26,5 @@ Visit https://github.com/prometheus-operator/kube-prometheus for instructions on
 - Run port-monitor to open its UI
 
 ```
-#kubectl -n monitoring port-forward service/prometheus-grafana --address 0.0.0.0 --address :: 80:80
+kubectl -n monitoring port-forward service/prometheus-grafana --address 0.0.0.0 --address :: 80:80
 ```
