@@ -1,7 +1,7 @@
 # How to fix compdef_error in  mac?
 
 ```
-#complete:13: command not found: compdef
+complete:13: command not found: compdef
 ```
 - Add this in .zshrc file
 ```
