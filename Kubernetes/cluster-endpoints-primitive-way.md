@@ -25,49 +25,52 @@ done
 
 ### Capture and use the generated token:
 ```
-#APISERVER=$(kubectl config view --minify | grep server | cut -f 2- -d ":" | tr -d " ")
-#TOKEN=$(kubectl describe secret default-token | grep -E '^token' | cut -f2 -d':' | tr -d " ")
-#curl $APISERVER/api --header "Authorization: Bearer $TOKEN" --insecure
+APISERVER=$(kubectl config view --minify | grep server | cut -f 2- -d ":" | tr -d " ")
+
+TOKEN=$(kubectl describe secret default-token | grep -E '^token' | cut -f2 -d':' | tr -d " ")
+
+curl $APISERVER/api --header "Authorization: Bearer $TOKEN" --insecure
 ```
 # Alternatively you can also do 
 ```
-#kubectl proxy --port=8080 &
-#curl http://localhost:8080/api/
+kubectl proxy --port=8080 &
+
+curl http://localhost:8080/api/
 ```
 
 # Alternatively you can also do
 ### Point to the internal API server hostname
 ```
-#APISERVER=https://kubernetes.default.svc
+APISERVER=https://kubernetes.default.svc
 ```
 
 ### Path to ServiceAccount token
 ```
-#SERVICEACCOUNT=/var/run/secrets/kubernetes.io/serviceaccount
+SERVICEACCOUNT=/var/run/secrets/kubernetes.io/serviceaccount
 ```
 
 ### Read this Pod's namespace
 ```
-#NAMESPACE=$(cat ${SERVICEACCOUNT}/namespace)
+NAMESPACE=$(cat ${SERVICEACCOUNT}/namespace)
 ```
 
 ### Read the ServiceAccount bearer token
 ```
-#TOKEN=$(cat ${SERVICEACCOUNT}/token)
+TOKEN=$(cat ${SERVICEACCOUNT}/token)
 ```
 
 ### Reference the internal certificate authority (CA)
 ```
-#CACERT=${SERVICEACCOUNT}/ca.crt
+CACERT=${SERVICEACCOUNT}/ca.crt
 ```
 
 ### Explore the API with TOKEN
 ```
-#curl --cacert ${CACERT} --header "Authorization: Bearer ${TOKEN}" -X GET ${APISERVER}/api
+curl --cacert ${CACERT} --header "Authorization: Bearer ${TOKEN}" -X GET ${APISERVER}/api
 ```
 
 # Alternatively you can also do
 ```
-#aws eks describe-cluster --name cluster6 | jq -r .cluster.endpoint
+aws eks describe-cluster --name cluster6 | jq -r .cluster.endpoint
 https://123456789123456789.gr7.ap-northeast-2.eks.amazonaws.com
 ```

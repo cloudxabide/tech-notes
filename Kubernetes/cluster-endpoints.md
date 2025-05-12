@@ -2,7 +2,7 @@
 
 - This is a very important and pertinent question that keeps coming up and its solution is even more simpler :) 
 ```
-#kubectl cluster-info
+kubectl cluster-info
 ```
 
 ```

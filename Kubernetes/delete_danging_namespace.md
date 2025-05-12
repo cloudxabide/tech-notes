@@ -5,7 +5,7 @@ Error: INSTALLATION FAILED: failed to create resource: roles.rbac.authorization.
 ```
 
 ```
-#kubectl get ns -A
+kubectl get ns -A
 NAME              STATUS        AGE
 cilium-secrets    Terminating   19h
 default           Active        19h
@@ -15,14 +15,18 @@ kube-system       Active        19h
 ```
 
 ```
-#NAMESPACE=cilium-secrets
-#kubectl proxy &
+NAMESPACE=cilium-secrets
+
+kubectl proxy &
 [1] 4337
 
-#Starting to serve on 127.0.0.1:8001
-#kubectl get namespace $NAMESPACE -o json |jq '.spec = {"finalizers":[]}' >temp.json
-#rm -rf tmp.json
-#curl -k -H "Content-Type: application/json" -X PUT --data-binary @temp.json 127.0.0.1:8001/api/v1/namespaces/$NAMESPACE/finalize
+Starting to serve on 127.0.0.1:8001
+
+kubectl get namespace $NAMESPACE -o json |jq '.spec = {"finalizers":[]}' >temp.json
+
+rm -rf tmp.json
+
+curl -k -H "Content-Type: application/json" -X PUT --data-binary @temp.json 127.0.0.1:8001/api/v1/namespaces/$NAMESPACE/finalize
 {
   "kind": "Namespace",
   "apiVersion": "v1",
@@ -163,7 +167,7 @@ kube-system       Active        19h
 }
 ```
 ```
-#kubectl get ns -A
+kubectl get ns -A
 NAME              STATUS   AGE
 default           Active   19h
 kube-node-lease   Active   19h
