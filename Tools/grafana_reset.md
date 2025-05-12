@@ -1,12 +1,12 @@
 - To reset Grafana password
 
 ```
-#docker exec -it <name of grafana container> grafana-cli admin reset-admin-password <fill in password>
+docker exec -it <name of grafana container> grafana-cli admin reset-admin-password <fill in password>
 ```
 - To find the password for Grafana
 
 ```
-#kubectl get secret prometheus-grafana -oyaml -n monitoring
+kubectl get secret prometheus-grafana -oyaml -n monitoring
 apiVersion: v1
 data:
   admin-password: c12345678912345678==
