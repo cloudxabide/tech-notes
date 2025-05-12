@@ -4,7 +4,7 @@ This is assuming that <[ROSA CLI](https://docs.redhat.com/en/documentation/red_h
 ## List the versions that are on the EKS node
 
 ```
-#rosa download rosa-client
+rosa download rosa-client
 ```
 
 ```
@@ -13,10 +13,13 @@ Downloading... 36 MB complete
 I: Successfully downloaded rosa-linux.tar.gz
 
 ```
-#tar xvf rosa-linux.tar.gz
-#rosa
-#sudo mv rosa /usr/local/bin/rosa
-#rosa version
+tar xvf rosa-linux.tar.gz
+rosa
+```
+
+```
+sudo mv rosa /usr/local/bin/rosa
+rosa version
 I: 1.2.50
 I: Your ROSA CLI is up to date.
 ```
