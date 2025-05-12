@@ -4,7 +4,7 @@
 - Using Azure CLI, you can check the routes that the Azure Route server has learned.
 
 ```
-#az network routeserver peering list-learned-routes --name 'cilium-egress-gw-bgp' --resource-group 'by
+az network routeserver peering list-learned-routes --name 'cilium-egress-gw-bgp' --resource-group 'by
 ocniars' --routeserver 'myRouteServer'
 {
   "RouteServiceRole_IN_0": [
@@ -63,7 +63,7 @@ byocniars' --routeserver 'myRouteServer'
 - You can use Azure CLI to check the routes that the Azure Route server has advertised (including the application VM in the subnet 192.168.40.0/22).
 
 ```
-#az network routeserver peering list-advertised-routes --name 'cilium-egress-gw-bgp' --resource-group
+az network routeserver peering list-advertised-routes --name 'cilium-egress-gw-bgp' --resource-group
 'byocniars' --routeserver 'myRouteServer'
 {
   "RouteServiceRole_IN_0": [
