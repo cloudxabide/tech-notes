@@ -13,7 +13,7 @@ external-envoy-proxy                              false
 
 ### Is there a way to connect hubble client to a hubble server running on a cilium agent (as opposed to hubble relay)?
 ```
-#kubectl -n kube-system exec $CILIUM_POD -- hubble observe
+kubectl -n kube-system exec $CILIUM_POD -- hubble observe
 ```
 
 ### Gateway API and Annotations
