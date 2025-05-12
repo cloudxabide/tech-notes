@@ -2,7 +2,7 @@
 
 - IPAM logs
 ```
-#tail -f /var/log/aws-routed-eni/ipamd.log
+tail -f /var/log/aws-routed-eni/ipamd.log
 ```
 
 ```
@@ -21,5 +21,5 @@
 
 - Kubelet logs
 ```
-#journalctl -u kubelet  >kubelet.log
+journalctl -u kubelet  >kubelet.log
 ```
