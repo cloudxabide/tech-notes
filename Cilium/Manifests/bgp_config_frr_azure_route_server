@@ -1,3 +1,4 @@
+```
 router bgp 64512
  neighbor 10.1.0.4 remote-as 65515
  neighbor 10.1.0.4 ebgp-multihop 5
@@ -15,3 +16,4 @@ router bgp 64512
  exit-address-family
 exit
 !
+```
