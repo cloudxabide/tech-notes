@@ -7,3 +7,7 @@ curl ifconfig.me
 ```
 curl ip.now
 ```
+
+```
+curl https://ipv4.icanhazip.com/
+```
