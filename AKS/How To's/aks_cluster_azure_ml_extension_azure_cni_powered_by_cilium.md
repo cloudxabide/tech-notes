@@ -24,10 +24,10 @@ Default enabled including preview versions for extension installation now. Disab
 
 - Create an AKS cluster
 ```
-#az aks create -n azml -g azml -l francecentral \\
-  --network-plugin azure \\
-  --network-plugin-mode overlay \\
-  --pod-cidr 192.168.0.0/16 \\
+#az aks create -n azml -g azml -l francecentral \
+  --network-plugin azure \
+  --network-plugin-mode overlay \
+  --pod-cidr 192.168.0.0/16 \
   --network-dataplane cilium
 ```
 - Attach a Kubernetes cluster to the Azure Machine Learning workspace. Once the Azure Machine Learning extension is deployed on the AKS cluster, you can attach the Kubernetes cluster to the Azure Machine Learning workspace and create compute targets for ML professionals.
