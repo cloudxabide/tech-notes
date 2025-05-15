@@ -11,20 +11,20 @@ az group create --name azml --location westcentralus
 
 - Register and add the extensions
 ```
-#az extension add --name k8s-extension
+az extension add --name k8s-extension
 Default enabled including preview versions for extension installation now. Disabled in May 2024. Use '--allow-preview true' to enable it specifically if needed. Use '--allow-preview false' to install stable version only.
-#az extension  add -n ml
+az extension  add -n ml
 ```
 
 - For Azure Machine Learning extension deployment on AKS cluster, make sure to specify managedClusters value for --cluster-type parameter. Run the following Azure CLI command to deploy Azure Machine Learning extension:
 
 ```
-# az k8s-extension create --name azml  --extension-type Microsoft.AzureML.Kubernetes --config enableTraining=True enableInference=True inferenceRouterServiceType=LoadBalancer allowInsecureConnections=True InferenceRouterHA=False --cluster-type managedClusters --cluster-name azml --resource-group azml --scope cluster
+az k8s-extension create --name azml  --extension-type Microsoft.AzureML.Kubernetes --config enableTraining=True enableInference=True inferenceRouterServiceType=LoadBalancer allowInsecureConnections=True InferenceRouterHA=False --cluster-type managedClusters --cluster-name azml --resource-group azml --scope cluster
 ```
 
 - Create an AKS cluster
 ```
-#az aks create -n azml -g azml -l francecentral \
+az aks create -n azml -g azml -l francecentral \
   --network-plugin azure \
   --network-plugin-mode overlay \
   --pod-cidr 192.168.0.0/16 \
@@ -33,18 +33,18 @@ Default enabled including preview versions for extension installation now. Disab
 - Attach a Kubernetes cluster to the Azure Machine Learning workspace. Once the Azure Machine Learning extension is deployed on the AKS cluster, you can attach the Kubernetes cluster to the Azure Machine Learning workspace and create compute targets for ML professionals.
 
 ```
-#az ml workspace create -n azml -g azml
+az ml workspace create -n azml -g azml
 ```
 
 - Attach a Kubernetes cluster to the Azure Machine Learning workspace
 
 ```
-#az ml compute attach --resource-group azml --workspace-name azml --type Kubernetes --name k8s-compute --resource-id "/subscriptions/####################################/resourceGroups/azml/providers/Microsoft.ContainerService/managedclusters/azml" --identity-type SystemAssigned --namespace azureml --no-wait
+az ml compute attach --resource-group azml --workspace-name azml --type Kubernetes --name k8s-compute --resource-id "/subscriptions/####################################/resourceGroups/azml/providers/Microsoft.ContainerService/managedclusters/azml" --identity-type SystemAssigned --namespace azureml --no-wait
 ```
 
 - Check that the pods are up and running
 ```
-#kubectl get pods -A -o wide
+kubectl get pods -A -o wide
 NAMESPACE     NAME                                                     READY   STATUS      RESTARTS   AGE    IP              NODE                                NOMINATED NODE   READINESS GATES
 azureml       aml-operator-6f9fbb5c6-hlf7f                             2/2     Running     0          3d2h   192.168.1.231   aks-nodepool1-10287945-vmss000001   <none>           <none>
 azureml       amlarc-identity-controller-68cf5dd8b5-srshb              2/2     Running     0          3d2h   192.168.1.236   aks-nodepool1-10287945-vmss000001   <none>           <none>
