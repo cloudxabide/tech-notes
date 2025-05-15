@@ -21,13 +21,13 @@
 ## AKS cluster creation in BYOCNI mode
 
 ```
-#az group create -l canadacentral -n byocni
+az group create -l canadacentral -n byocni
 
-#az network vnet create -g byocni --location canadacentral --name byocni-vnet --address-prefixes 192.168.8.0/22 -o none
+az network vnet create -g byocni --location canadacentral --name byocni-vnet --address-prefixes 192.168.8.0/22 -o none
 
-#az network vnet subnet create -g byocni --vnet-name byocni-vnet --name byocni-subnet --address-prefixes 192.168.10.0/24 -o none 
+az network vnet subnet create -g byocni --vnet-name byocni-vnet --name byocni-subnet --address-prefixes 192.168.10.0/24 -o none 
 
-#az aks create -l eastus -g byocni -n byocni --network-plugin none --vnet-subnet-id /subscriptions/#############################/resourceGroups/byocni/providers/Microsoft.Network/virtualNetworks/byocni-vnet/subnets/byocni-subnet
+az aks create -l eastus -g byocni -n byocni --network-plugin none --vnet-subnet-id /subscriptions/#############################/resourceGroups/byocni/providers/Microsoft.Network/virtualNetworks/byocni-vnet/subnets/byocni-subnet
 
-#az aks get-credentials --resource-group byocni --name byocni
+az aks get-credentials --resource-group byocni --name byocni
 ```
