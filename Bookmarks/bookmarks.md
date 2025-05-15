@@ -65,3 +65,6 @@
 
 ## Maximum IP addresses per network interface
 [IPperENI](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/AvailableIpPerENI.html)
+
+## Find Ubuntu Image on Azure
+[Azure-Ubuntu](https://documentation.ubuntu.com/azure/azure-how-to/instances/find-ubuntu-images/)
