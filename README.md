@@ -19,6 +19,11 @@
         - What are all the CNI options and which one to choose?
         - RDMA, inifiniband, ML extension, etc.
     - GKE
+* My Blogs- A comprehensive list of blogs that I have written on
+    - Medium.com
+    - My current stint at Isovalent/Cilium
+    - My stint at AviNetworks/VMware
+    - Videos with partners
 * Bookmarks- These bookmarks span multiple areas and domains and will be updated almost every day.
 * Kubernetes
     - Manifests about how to create services, deployments (dual stack), network policies, client, servers, etc.
