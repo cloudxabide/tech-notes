@@ -12,6 +12,7 @@
 * Bookmarks- These bookmarks span multiple areas and domains and will be updated almost every day.
 * Kubernetes
 * Cilium
+* Performance (Segmentaiton offload, DPDK, NIC's, SRIOV, Poll Mode Drivers)
 * Blog Manifests for the work I have done on medium.com
 * Cheat sheets that I have picked up from various platforms (I don't own them)
 * Tools that I have used for work
