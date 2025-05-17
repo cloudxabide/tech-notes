@@ -12,7 +12,7 @@
 * Security
 * Kubernetes
 * Cilium
-* Blog Manifests for the work I have done in an official capacity and on medium.com
+* Blog Manifests for the work I have done on medium.com
 * Cheat sheets that I have picked up from various platforms (I don't own them)
 * Tools that I have used for work
 * My experiences while using Mac, Windows, Linux and some tidbits 
