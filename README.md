@@ -22,6 +22,7 @@
             - Auto Scaling Group
             - Instance Selector
             - Zonal Shift
+            - ARM support
         - Useful commands, CLI's, eksctl options of how to find basic to complex things.
     - EKS-Anywhere
         - Manifests of how to create EKS-Anywhere clusters
