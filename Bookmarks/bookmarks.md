@@ -77,3 +77,6 @@
 
 ## Kubernetes Event-driven Autoscaling in AKS
 [Keda AKS](https://learn.microsoft.com/en-us/azure/aks/keda-deploy-add-on-cli)
+
+## AKS automatic (using Azure CNI powered by Cilium)
+[AKS Automatic](https://learn.microsoft.com/en-us/azure/aks/automatic/quick-automatic-managed-network?pivots=azure-cli)
