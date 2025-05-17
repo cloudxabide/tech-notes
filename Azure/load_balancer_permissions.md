@@ -1,5 +1,7 @@
 # Load Balancer Permissions
 
+- You need to ensure that the following permissions are in place.
+
 ```
 - Microsoft.Network/virtualNetworks/subnets/join/action
 - Microsoft.Network/virtualNetworks/subnets/read
