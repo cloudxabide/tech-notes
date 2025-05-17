@@ -1,7 +1,4 @@
-<!-- ⚠️ This README has been generated from the file(s) "blueprint.md" ⚠️-->
-[![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/colored.png)](#welcome-to-tech-notes)
-
-# ➤ Welcome to tech-notes
+# Welcome to tech-notes
 
 - Its a compilation of notes that I have captured over the years that comprises notes, how-to-guides of features, etc.
 * Cloud
