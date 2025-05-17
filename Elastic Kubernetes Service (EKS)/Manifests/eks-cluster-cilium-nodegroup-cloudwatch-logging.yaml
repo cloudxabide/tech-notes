@@ -2,11 +2,9 @@ apiVersion: eksctl.io/v1alpha5
 kind: ClusterConfig
 
 metadata:
-     name: cluster1
-     region: ap-northeast-2
+     name: cluster2
+     region: ap-northeast-1
      version: "1.30"
-     tags:
-       karpenter.sh/discovery: cluster1
 
 iam:
   withOIDC: true
@@ -29,7 +27,14 @@ managedNodeGroups:
          value: "true"
          effect: "NoExecute"
 
-karpenter:
-  version: '1.4.0' # Exact version must be provided
-  createServiceAccount: true # default is false
-  withSpotInterruptionQueue: true # adds all required policies and rules for supporting Spot Interruption Queue, default is false
+
+cloudWatch:
+  clusterLogging:
+    # enable specific types of cluster control plane logs
+    enableTypes: ["audit", "authenticator", "controllerManager"]
+    # all supported types: "api", "audit", "authenticator", "controllerManager", "scheduler"
+    # supported special values: "*" and "all"
+
+    # Sets the number of days to retain the logs for (see [CloudWatch docs](https://docs.aws.amazon.com/AmazonCloudWatchLogs/latest/APIReference/API_PutRetentionPolicy.html#API_PutRetentionPolicy_RequestSyntax)).
+    # By default, log data is stored in CloudWatch Logs indefinitely.
+    logRetentionInDays: 60
