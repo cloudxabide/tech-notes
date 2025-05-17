@@ -27,7 +27,12 @@
     - EKS-Anywhere
         - Manifests of how to create EKS-Anywhere clusters
     - AKS
-        - Manifests of how to create AKS clusters
+        - Manifests of how to create AKS clusters with CNI's
+            - Azure CNI powered by Cilium
+            - BYOCNI
+            - Kubenet
+            - Azure CNI
+            - Azure CNI Overlay
         - What are all the CNI options and which one to choose?
         - RDMA, inifiniband, ML extension, etc.
     - GKE
