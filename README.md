@@ -1,2 +1,18 @@
-# What's covered?
-Work related topics covering a wide range of areas Cloud, Networking, Security, tools, bookmarks, links, IaaC, etc.
+# Welcome to tech-notes
+
+- Its a compilation of notes that I have captured over the years that comprises notes, how-to-guides of features, etc.
+* Cloud
+    - AWS
+    - Azure
+    - OpenShift
+    - EKS
+    - EKS-Anywhere
+    - AKS
+    - GKE
+* Security
+* Kubernetes
+* Cilium
+* Blog Manifests for the work I have done in an official capacity and on medium.com
+* Cheat sheets that I have picked up from various platforms (I don't own them)
+* Tools that I have used for work
+* My experiences while using Mac, Windows, Linux and some tidbits 
