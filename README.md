@@ -12,6 +12,7 @@
     - EKS
         - Manifests of how to create EKS clusters with features like
             - Auto Repair
+            - Karpenter
             - EFA adapter
             - ENA adapter
             - IPv6 only cluster
@@ -23,6 +24,9 @@
             - Instance Selector
             - Zonal Shift
             - ARM support
+            - Custom DNS
+            - Local Zone
+            - CloudWatch Logging
         - Useful commands, CLI's, eksctl options of how to find basic to complex things.
     - EKS-Anywhere
         - Manifests of how to create EKS-Anywhere clusters
