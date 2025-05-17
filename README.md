@@ -9,7 +9,7 @@
     - EKS-Anywhere
     - AKS
     - GKE
-* Security
+* Bookmarks- These bookmarks span multiple areas and domains and will be updated almost every day.
 * Kubernetes
 * Cilium
 * Blog Manifests for the work I have done on medium.com
