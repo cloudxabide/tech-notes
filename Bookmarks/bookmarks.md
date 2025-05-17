@@ -71,3 +71,6 @@
 
 ## Image cleaner in AKS
 [Image-Cleaner AKS](https://learn.microsoft.com/en-us/azure/aks/image-cleaner)
+
+## Vertical Pod Auto-scaler in AKS
+[Vertical Pod Autoscaler](https://learn.microsoft.com/en-us/azure/aks/use-vertical-pod-autoscaler)
