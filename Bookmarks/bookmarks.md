@@ -74,3 +74,6 @@
 
 ## Vertical Pod Auto-scaler in AKS
 [Vertical Pod Autoscaler](https://learn.microsoft.com/en-us/azure/aks/use-vertical-pod-autoscaler)
+
+## Kubernetes Event-driven Autoscaling in AKS
+[Keda AKS](https://learn.microsoft.com/en-us/azure/aks/keda-deploy-add-on-cli)
