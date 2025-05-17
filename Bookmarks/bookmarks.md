@@ -80,3 +80,6 @@
 
 ## AKS automatic (using Azure CNI powered by Cilium)
 [AKS Automatic](https://learn.microsoft.com/en-us/azure/aks/automatic/quick-automatic-managed-network?pivots=azure-cli)
+
+## Karpenter Compatability Matrix
+[Karpenter-Kubernetes Matrix](https://karpenter.sh/docs/upgrading/compatibility/)
