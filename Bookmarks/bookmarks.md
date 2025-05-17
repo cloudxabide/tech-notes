@@ -68,3 +68,6 @@
 
 ## Find Ubuntu Image on Azure
 [Azure-Ubuntu](https://documentation.ubuntu.com/azure/azure-how-to/instances/find-ubuntu-images/)
+
+## Image cleaner in AKS
+[Image-Cleaner AKS](https://learn.microsoft.com/en-us/azure/aks/image-cleaner)
