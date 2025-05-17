@@ -10,7 +10,18 @@
         - Create an Azure VM based out of Ubuntu 24.04
     - OpenShift
     - EKS
-        - Manifests of how to create EKS clusters
+        - Manifests of how to create EKS clusters with features like
+            - Auto Repair
+            - EFA adapter
+            - ENA adapter
+            - IPv6 only cluster
+            - BYOCNI based cluster
+            - On-Demand instances
+            - Spot instance
+            - Private EKS cluster
+            - Auto Scaling Group
+            - Instance Selector
+            - Zonal Shift
         - Useful commands, CLI's, eksctl options of how to find basic to complex things.
     - EKS-Anywhere
         - Manifests of how to create EKS-Anywhere clusters
