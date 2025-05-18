@@ -83,3 +83,7 @@
 
 ## Karpenter Compatability Matrix
 [Karpenter-Kubernetes Matrix](https://karpenter.sh/docs/upgrading/compatibility/)
+
+## AKS communication manager
+- AKS communication manager uses Azure Resource Notifications and Azure Resource Graph frameworks. This tool enables you to closely monitor your upgrades because it provides you with timely alerts on event triggers and outcomes. If maintenance fails, it notifies you with the reasons for the failure, reducing operational hassles related to observability and follow-ups.
+[AKS communication manager](https://learn.microsoft.com/en-us/azure/aks/aks-communication-manager)
