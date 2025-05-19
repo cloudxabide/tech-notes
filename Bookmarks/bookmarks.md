@@ -90,3 +90,36 @@
 
 ## Generated Bicep Docs
 [bicep-docs](https://github.com/christosgalano/bicep-docs)
+
+## AWS Solutions Hub
+[Github repo- AWS Solutions Hub](https://github.com/kirby-rocket/AWS-Solutions-Hub)
+
+## Linux Priviledge Escalation Script
+[LinPEAS](https://github.com/peass-ng/PEASS-ng/blob/master/linPEAS/README.md)
+
+## Google Networking Deep Dive
+[Google VPC and Peering Deep Dive](https://medium.com/google-cloud/google-networking-deep-dive-whats-behind-the-scenes-147a4b7eabe7)
+
+## Kubernetes aware Traffic Monitoring
+[egressd](https://github.com/castai/egressd)
+
+## Learning Azure
+[awesome-azure-learning](https://github.com/shiftavenue/awesome-azure-learning)
+
+## EC2 networking under hood
+[EC2 networking deep dive](https://www.youtube.com/watch?v=_hiNXKQZc0M)
+
+## Linux Routing
+[Linux Routing Fundamentals](https://blog.sdn.clinic/2025/01/linux-routing-fundamentals/)
+
+## EKS best practices guide
+[EKS best practices](https://docs.aws.amazon.com/eks/latest/best-practices/introduction.html?advocacy_source=everyonesocial&trk=global_employee_advocacy&sc_channel=sm&es_id=cce017dde6)
+
+## Troubleshooting EKS Networking
+[Troubleshooting EKS Networking](https://repost.aws/articles/ARMvpWa7AYScyBBPRr6xkvXw)
+
+## Visual Subnet Calculator
+[visual subnet calculator](https://visualsubnetcalc.com/)
+
+## Kubelogin
+[Kubernetes OIDC authentication](https://github.com/int128/kubelogin)
