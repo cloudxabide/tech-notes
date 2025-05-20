@@ -18,7 +18,7 @@
 - Security Groups not visible in ACI: they are implemented by OS as OVS rules.
 - All the operations are done on OpenStack through Horizon, CLI or Heat
 
-![ml2_neutron_apic_mapping](ml2_standard_neutron_plugin_mapping.png)
+    ![ml2_neutron_apic_mapping](ml2_standard_neutron_plugin_mapping.png)
 
 ## GB2 Plugin
 - Application Centric
@@ -27,7 +27,7 @@
 - GBP offers much granularity and flexibility as compared to standard neutron.
 - GBP comes with CLI, Heat and Horizon plugins.
 
-![gbp_apic_mapping](gbp_apic_mapping.png)
+    ![gbp_apic_mapping](gbp_apic_mapping.png)
 
 ## AIM (APIC Integration Manager)
 - The AIM daemon is running on the controller nodes and is responsible to configure ACI through REST API call based on the OpenStack policy model defined.
