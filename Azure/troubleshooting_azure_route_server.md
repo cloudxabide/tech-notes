@@ -1,7 +1,7 @@
 # Azure Route Server General Troubleshooting commands
 
 ## How can you check the learned routes in the Azure Route Server?
-- Using Azure CLI, you can check the routes that the Azure Route server has learned.
+- Using Azure CLI, you can check the routes that the Azure Route server has learnt.
 
 ```
 az network routeserver peering list-learned-routes --name 'cilium-egress-gw-bgp' --resource-group 'by
