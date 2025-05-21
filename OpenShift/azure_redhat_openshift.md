@@ -8,6 +8,11 @@ The Microsoft Azure Red Hat OpenShift service enables you to deploy fully manage
 - Ensure you have enough quota resources to create an AKS cluster. Go to the Subscription blade, navigate to “Usage + Quotas”, and make sure you have enough quota for the following resources:
     - Azure Red Hat OpenShift requires at least 40 cores to create and run a cluster. The default Azure resource quota for a new Azure subscription is only 10.
 
+## CNI support
+- Since ARO is based out of OVN, it uses the Generic Network Virtualization Encapsulation (Geneve) protocol rather than the Virtual Extensible LAN (VXLAN) protocol to create an overlay network between nodes.
+- Support for OpenShift SDN is deprecated.
+- Support for [3rd party CNI](https://access.redhat.com/solutions/7029059)is pending.
+
 ## Register the resource providers
 ```
 az provider register -n Microsoft.RedHatOpenShift --wait
@@ -487,4 +492,3 @@ openshift-route-controller-manager                 route-controller-manager-9f7f
 openshift-service-ca-operator                      service-ca-operator-fcc986794-sdwgc                              1/1     Running                  0              13h     10.129.0.39    cluster-797pp-master-0                      <none>           <none>
 openshift-service-ca                               service-ca-6b859dc56d-hbskv                                      1/1     Running                  0              13h     10.129.0.38    cluster-797pp-master-0                      <none>           <none>
 ```
-- Since ARO is based out of OVN, it uses the Generic Network Virtualization Encapsulation (Geneve) protocol rather than the Virtual Extensible LAN (VXLAN) protocol to create an overlay network between nodes.
