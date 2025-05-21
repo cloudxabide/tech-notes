@@ -11,7 +11,7 @@ The Microsoft Azure Red Hat OpenShift service enables you to deploy fully manage
 ## CNI support
 - Since ARO is based out of OVN, it uses the Generic Network Virtualization Encapsulation (Geneve) protocol rather than the Virtual Extensible LAN (VXLAN) protocol to create an overlay network between nodes.
 - Support for OpenShift SDN is deprecated.
-- Support for [3rd party CNI](https://access.redhat.com/solutions/7029059)is pending.
+- Support for [3rd party CNI](https://access.redhat.com/solutions/7029059) is pending.
 
 ## Register the resource providers
 ```
