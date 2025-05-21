@@ -50,6 +50,8 @@ az group create \
   "type": "Microsoft.Resources/resourceGroups"
 }
 ```
+- In addition to this manually created Resource Group, there is another managed Resource Group that is created that contains Private Endpoints, VM's, Private Link Service Endpoints etc.
+
 ## Networking
 - Create a virtual network with two empty subnets.
 ```
