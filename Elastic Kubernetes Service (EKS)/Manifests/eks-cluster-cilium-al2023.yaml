@@ -4,7 +4,7 @@ kind: ClusterConfig
 metadata:
   name: cluster1
   region: ap-northeast-2
-  version: "1.29"
+  version: "1.30"
 
 iam:
   withOIDC: true
