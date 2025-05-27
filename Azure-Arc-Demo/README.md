@@ -1,1 +1,1 @@
-## Sample deployment file to be used in Azure-Arc Clusters with Flex and Gitops based deployments.
+## Sample deployment to be used in Azure-Arc Clusters with Flex and Gitops based deployments.
