@@ -37,7 +37,7 @@ spec:
     vnet:
       name: capiaks-vnet
   resourceGroup: capiaks
-  subscriptionID: 8dbd2563-77eb-41a1-917b-5a1344da9767
+  subscriptionID: ###################################
 ---
 apiVersion: controlplane.cluster.x-k8s.io/v1beta1
 kind: KubeadmControlPlane
@@ -127,7 +127,7 @@ spec:
         osType: Linux
       sshPublicKey: ""
       userAssignedIdentities:
-      - providerID: /subscriptions/8dbd2563-77eb-41a1-917b-5a1344da9767/resourceGroups/capz-ci/providers/Microsoft.ManagedIdentity/userAssignedIdentities/cloud-provider-user-identity
+      - providerID: /subscriptions/###################################/resourceGroups/capz-ci/providers/Microsoft.ManagedIdentity/userAssignedIdentities/cloud-provider-user-identity
       vmSize: Standard_D4_v3
 ---
 apiVersion: cluster.x-k8s.io/v1beta1
