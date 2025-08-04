@@ -5,7 +5,7 @@
 ```
 apt  install golang-go -y
 
-curl -Lo ./kind https://kind.sigs.k8s.io/dl/v0.27.0/kind-linux-amd64
+curl -Lo ./kind https://kind.sigs.k8s.io/dl/v0.27.0/kind-linux-arm64
 
 chmod +x ./kind
 
@@ -31,8 +31,7 @@ networking:
   disableDefaultCNI: true
 ```
 
-- Install Docker
-Run the following command to uninstall all conflicting packages:
+- Install Docker- Run the following command to uninstall all conflicting packages:
 ```
 for pkg in docker.io docker-doc docker-compose docker-compose-v2 podman-docker containerd runc; do sudo apt-get remove $pkg; done
 ```

@@ -1,0 +1,105 @@
+kind: ClusterRole
+apiVersion: rbac.authorization.k8s.io/v1
+metadata:
+  name: capa-eks-control-plane-system-capa-eks-control-plane-manager-role
+  labels:
+    cluster.x-k8s.io/provider: control-plane-aws-eks
+    clusterctl.cluster.x-k8s.io: ''
+rules:
+  - verbs:
+      - create
+      - delete
+      - get
+      - list
+      - patch
+      - update
+      - watch
+    apiGroups:
+      - ''
+    resources:
+      - secrets
+  - verbs:
+      - get
+      - list
+      - watch
+    apiGroups:
+      - cluster.x-k8s.io
+    resources:
+      - clusters
+      - clusters/status
+  - verbs:
+      - create
+      - delete
+      - get
+      - list
+      - patch
+      - update
+      - watch
+    apiGroups:
+      - controlplane.cluster.x-k8s.io
+    resources:
+      - awsmanagedcontrolplanes
+  - verbs:
+      - get
+      - patch
+      - update
+    apiGroups:
+      - controlplane.cluster.x-k8s.io
+    resources:
+      - awsmanagedcontrolplanes/status
+  - verbs:
+      - create
+      - get
+      - list
+      - patch
+      - watch
+    apiGroups:
+      - ''
+    resources:
+      - events
+  - verbs:
+      - get
+      - list
+      - watch
+    apiGroups:
+      - infrastructure.cluster.x-k8s.io
+    resources:
+      - awsclustercontrolleridentities
+      - awsclusterroleidentities
+      - awsclusterstaticidentities
+  - verbs:
+      - get
+      - list
+      - watch
+    apiGroups:
+      - infrastructure.cluster.x-k8s.io
+    resources:
+      - awsmachinepools
+      - awsmachinepools/status
+  - verbs:
+      - get
+      - list
+      - watch
+    apiGroups:
+      - infrastructure.cluster.x-k8s.io
+    resources:
+      - awsmachines
+      - awsmachines/status
+  - verbs:
+      - get
+      - list
+      - watch
+    apiGroups:
+      - infrastructure.cluster.x-k8s.io
+    resources:
+      - awsmanagedclusters
+      - awsmanagedclusters/status
+  - verbs:
+      - get
+      - list
+      - watch
+    apiGroups:
+      - infrastructure.cluster.x-k8s.io
+    resources:
+      - awsmanagedmachinepools
+      - awsmanagedmachinepools/status

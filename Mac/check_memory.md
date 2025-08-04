@@ -1,4 +1,4 @@
-# How to check memory on mac via CLI?
+# How to check memory on Mac via CLI?
 
 ```
 top -l 1 -s 0 | grep PhysMem

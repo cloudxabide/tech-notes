@@ -10,6 +10,7 @@
 * https://www.youtube.com/watch?v=xWyCxWEkd40 (OpenStack Summit Berlin)
 
 ## Isovalent
+* https://isovalent.com/blog/post/cilium-and-azure-arc/#h-deploy-configurations-using-gitops (GitOps, Flex in Azure Arc)
 * https://isovalent.com/blog/post/cilium-egress-gateway-eks/#h-how-can-you-scale-the-egress-gateway-solution (AWS Route Server and Egress GW)
 * https://isovalent.com/blog/post/cloud-annotations-for-gateway-api-ingress-with-cilium/
 * https://isovalent.com/blog/post/cilium-eks-anywhere/#h-nested-virtualisation-on-eks-anywhere (KubeVirt)
@@ -39,6 +40,7 @@
 * https://www.youtube.com/watch?v=A91iQS0F9Ug
 
 ## Medium.com (Personal-Blogs)
+* https://medium.com/@amitmavgupta/clusterapi-provider-for-aws-and-cilium-e73dcdf44459
 * https://medium.com/@amitmavgupta/cilium-enhanced-networking-with-intel-82599-vi-bf7688b9615e
 * https://medium.com/@amitmavgupta/cilium-support-for-efa-drivers-in-eks-249987d043eb
 * https://medium.com/@amitmavgupta/cilium-ipv6-in-eks-e1fe7735feff
